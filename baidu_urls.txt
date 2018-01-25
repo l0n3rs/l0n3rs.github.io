@@ -1,0 +1,6 @@
+http://ka1i.org/2018/01/25/sql/
+http://ka1i.org/2018/01/25/xsslist/
+http://ka1i.org/2018/01/25/xsstp/
+http://ka1i.org/2018/01/23/wrj/
+http://ka1i.org/2017/11/23/hexo/
+http://ka1i.org/2017/10/22/ajax-jsonp/

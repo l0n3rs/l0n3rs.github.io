@@ -4,6 +4,94 @@
 
     
   <url>
+    <loc>http://ka1i.org/2018/01/25/sql/</loc>
+    <lastmod>2018-01-25T09:32:46.572Z</lastmod>
+    <data>
+        <display>
+        <title>SQL注入关键字</title>
+        <pubTime>2018-01-25T09:30:00.000Z</pubTime>
+        
+        <tag>SQL</tag>
+         
+        <tag>注入</tag>
+         
+         
+           
+             
+              <breadCrumb title="注入" url="http://ka1i.org/categories/%E6%B3%A8%E5%85%A5/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ka1i.org/2018/01/25/xsstp/</loc>
+    <lastmod>2018-01-25T09:23:07.862Z</lastmod>
+    <data>
+        <display>
+        <title>突破XSS字符数量限制执行任意JS代码</title>
+        <pubTime>2018-01-25T09:08:37.000Z</pubTime>
+        
+        <tag>xss</tag>
+         
+        <tag>突破</tag>
+         
+         
+           
+             
+              <breadCrumb title="XSS" url="http://ka1i.org/categories/XSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ka1i.org/2018/01/25/xsslist/</loc>
+    <lastmod>2018-01-25T09:22:48.091Z</lastmod>
+    <data>
+        <display>
+        <title>一些实用的XSS代码</title>
+        <pubTime>2018-01-25T09:13:35.000Z</pubTime>
+        
+        <tag>xss</tag>
+         
+        <tag>代码</tag>
+         
+         
+           
+             
+              <breadCrumb title="XSS" url="http://ka1i.org/categories/XSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ka1i.org/2017/11/23/hexo/</loc>
+    <lastmod>2018-01-25T09:13:14.499Z</lastmod>
+    <data>
+        <display>
+        <title>Github搭建Hexo博客</title>
+        <pubTime>2017-11-23T02:20:37.000Z</pubTime>
+        
+        <tag>Github</tag>
+         
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="建站" url="http://ka1i.org/categories/%E5%BB%BA%E7%AB%99/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ka1i.org/2017/10/21/aspcms/</loc>
     <lastmod>2018-01-23T04:06:09.534Z</lastmod>
     <data>
@@ -45,28 +133,6 @@
            
              
               <breadCrumb title="无线攻击" url="http://ka1i.org/categories/%E6%97%A0%E7%BA%BF%E6%94%BB%E5%87%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ka1i.org/2017/11/23/hexo/</loc>
-    <lastmod>2018-01-23T04:04:58.557Z</lastmod>
-    <data>
-        <display>
-        <title>Github搭建Hexo博客</title>
-        <pubTime>2017-11-23T02:20:37.000Z</pubTime>
-        
-        <tag>Github</tag>
-         
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="建站" url="http://ka1i.org/categories/%E5%BB%BA%E7%AB%99/"/>
           
         </display>
     </data>

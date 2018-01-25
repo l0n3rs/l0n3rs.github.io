@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://ka1i.org/2018/01/25/sql/</loc>
+    
+    <lastmod>2018-01-25T09:32:46.572Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ka1i.org/2018/01/25/xsstp/</loc>
+    
+    <lastmod>2018-01-25T09:23:07.862Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ka1i.org/2018/01/25/xsslist/</loc>
+    
+    <lastmod>2018-01-25T09:22:48.091Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://ka1i.org/2017/11/23/hexo/</loc>
+    
+    <lastmod>2018-01-25T09:13:14.499Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://ka1i.org/2017/10/21/aspcms/</loc>
     
     <lastmod>2018-01-23T04:06:09.534Z</lastmod>
@@ -12,13 +40,6 @@
     <loc>http://ka1i.org/2018/01/23/wrj/</loc>
     
     <lastmod>2018-01-23T04:05:39.927Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://ka1i.org/2017/11/23/hexo/</loc>
-    
-    <lastmod>2018-01-23T04:04:58.557Z</lastmod>
     
   </url>
   
