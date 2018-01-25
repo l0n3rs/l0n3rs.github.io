@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://ka1i.org/2018/01/25/xsstp/</loc>
-    <lastmod>2018-01-25T09:40:01.804Z</lastmod>
+    <lastmod>2018-01-25T11:04:08.842Z</lastmod>
     <data>
         <display>
         <title>突破XSS字符数量限制执行任意JS代码</title>
