@@ -4,6 +4,100 @@
 
     
   <url>
+    <loc>http://ka1i.org/2018/01/27/badusb/</loc>
+    <lastmod>2018-01-27T11:06:04.181Z</lastmod>
+    <data>
+        <display>
+        <title>Badusb FTP传马脚本</title>
+        <pubTime>2018-01-27T11:02:35.000Z</pubTime>
+        
+        <tag>badusb</tag>
+         
+        <tag>脚本</tag>
+         
+        <tag>木马</tag>
+         
+        <tag>渗透测试</tag>
+         
+        <tag>硬件</tag>
+         
+        <tag>极客</tag>
+         
+         
+           
+             
+              <breadCrumb title="BadUsb" url="http://ka1i.org/categories/BadUsb/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ka1i.org/2017/10/22/server-config/</loc>
+    <lastmod>2018-01-27T11:05:56.088Z</lastmod>
+    <data>
+        <display>
+        <title>ubuntu服务器详细配置</title>
+        <pubTime>2017-10-22T12:36:03.000Z</pubTime>
+        
+        <tag>linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="开发工具" url="http://ka1i.org/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ka1i.org/2017/10/21/aspcms/</loc>
+    <lastmod>2018-01-27T11:01:18.208Z</lastmod>
+    <data>
+        <display>
+        <title>ASPCMS批量测试脚本</title>
+        <pubTime>2017-10-21T02:20:37.000Z</pubTime>
+        
+        <tag>ASPCMS</tag>
+         
+        <tag>批量</tag>
+         
+        <tag>getshell</tag>
+         
+         
+           
+             
+              <breadCrumb title="脚本" url="http://ka1i.org/categories/%E8%84%9A%E6%9C%AC/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ka1i.org/2017/10/22/ajax-jsonp/</loc>
+    <lastmod>2018-01-27T11:00:19.483Z</lastmod>
+    <data>
+        <display>
+        <title>ajax和jsonp区别</title>
+        <pubTime>2017-10-22T12:54:16.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="http://ka1i.org/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ka1i.org/2018/01/25/edit/</loc>
     <lastmod>2018-01-25T13:13:30.145Z</lastmod>
     <data>
@@ -138,30 +232,6 @@
 
     
   <url>
-    <loc>http://ka1i.org/2017/10/21/aspcms/</loc>
-    <lastmod>2018-01-23T04:06:09.534Z</lastmod>
-    <data>
-        <display>
-        <title>ASPCMS批量测试脚本</title>
-        <pubTime>2017-10-21T02:20:37.000Z</pubTime>
-        
-        <tag>ASPCMS</tag>
-         
-        <tag>批量</tag>
-         
-        <tag>getshell</tag>
-         
-         
-           
-             
-              <breadCrumb title="脚本" url="http://ka1i.org/categories/%E8%84%9A%E6%9C%AC/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://ka1i.org/2018/01/23/wrj/</loc>
     <lastmod>2018-01-23T04:05:39.927Z</lastmod>
     <data>
@@ -179,46 +249,6 @@
            
              
               <breadCrumb title="无线攻击" url="http://ka1i.org/categories/%E6%97%A0%E7%BA%BF%E6%94%BB%E5%87%BB/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ka1i.org/2017/10/22/server-config/</loc>
-    <lastmod>2017-10-22T05:55:10.409Z</lastmod>
-    <data>
-        <display>
-        <title>ubuntu服务器详细配置</title>
-        <pubTime>2017-10-22T12:36:03.000Z</pubTime>
-        
-        <tag>linux</tag>
-         
-         
-           
-             
-              <breadCrumb title="开发工具" url="http://ka1i.org/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ka1i.org/2017/10/22/ajax-jsonp/</loc>
-    <lastmod>2017-10-22T05:28:40.261Z</lastmod>
-    <data>
-        <display>
-        <title>ajax和jsonp区别</title>
-        <pubTime>2017-10-22T12:54:16.000Z</pubTime>
-        
-        <tag>http</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程语言" url="http://ka1i.org/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
           
         </display>
     </data>
