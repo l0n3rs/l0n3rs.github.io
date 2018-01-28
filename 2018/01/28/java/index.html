@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+<meta name="keywords" content="Java,孤独常伴,孤独常伴&#39;s Blog,逆向破解,Kali,linux网络安全,渗透测试,攻防演练,原创作品,黑客技术,web安全,SEO,系统安全,信息安全,编程交流,入侵,前端博客,JavaScript,html5,css3,Jquery,NodeJs,Ubuntu">
+
+  <title>Java基础 | 孤独常伴</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="字符串有整型的相互转换12String a = String.valueOf(2);   //integer to numeric string   int i = Integer.parseInt(a); //numeric string to an int">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java基础">
+<meta property="og:url" content="http://ka1i.org/2018/01/28/java/index.html">
+<meta property="og:site_name" content="孤独常伴">
+<meta property="og:description" content="字符串有整型的相互转换12String a = String.valueOf(2);   //integer to numeric string   int i = Integer.parseInt(a); //numeric string to an int">
+<meta property="og:updated_time" content="2018-01-28T04:13:07.170Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java基础">
+<meta name="twitter:description" content="字符串有整型的相互转换12String a = String.valueOf(2);   //integer to numeric string   int i = Integer.parseInt(a); //numeric string to an int">
+  
+    <link rel="alternative" href="/baidusitemap.xml" title="孤独常伴" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/head.jpg">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+  <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="img/head.jpg" class="js-avatar">
+            
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">孤独常伴</a></h1>
+        </hgroup>
+        
+        <p class="header-subtitle">孤独常伴&#39;s Blog 网络安全--渗透测试--攻防演练--原创作品--黑客技术--web安全--SEO--系统安全--信息安全--编程交流--入侵</p>
+        
+        
+            <form>
+                <input type="text" class="st-default-search-input search" id="local-search-input" placeholder="搜索一下" autocomplete="off">
+            </form>
+            <div id="local-search-result"></div>
+        
+        
+            <script type="text/javascript">
+                (function() {
+                    'use strict';
+                    function getMatchData(keyword, data) {
+                        var matchData = [];
+                        for(var i =0;i<data.length;i++){
+                            if(data[i].title.toLowerCase().indexOf(keyword)>=0) 
+                                matchData.push(data[i])
+                        }
+                        return matchData;
+                    }
+                    var $input = $('#local-search-input');
+                    var $resultContent = $('#local-search-result');
+                    $input.keyup(function(){
+                        $.ajax({
+                            url: '/search.json',
+                            dataType: "json",
+                            success: function( json ) {
+                                var str='<ul class=\"search-result-list\">';                
+                                var keyword = $input.val().trim().toLowerCase();
+                                $resultContent.innerHTML = "";
+                                if ($input.val().trim().length <= 0) {
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                }
+                                var results = getMatchData(keyword, json);
+                                if(results.length === 0){
+                                    $resultContent.empty();
+                                    $('#switch-area').show();
+                                    return;
+                                } 
+                                for(var i =0; i<results.length; i++){
+                                    str += "<li><a href='"+ results[i].url +"' class='search-result-title'>"+ results[i].title +"</a></li>";
+                                }
+                                str += "</ul>";
+                                $resultContent.empty();
+                                $resultContent.append(str);
+                                $('#switch-area').hide();
+                            }
+                        });
+                    });
+                })();
+            </script>
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a  href="http://ka1i.org">博客首页</a></li>
+                        
+                            <li><a  href="/archives">文章归档</a></li>
+                        
+                            <li><a  href="/tags">标签列表</a></li>
+                        
+                            <li><a  href="/about">个人简历</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail"  target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ajs7NTY0NjQyQnNzLGFtbw" title="mail">mail</a>
+                            
+                                <a class="fl github"  target="_blank" href="https://github.com/l0n3rs" title="github">github</a>
+                            
+                                <a class="fl weibo"  target="_blank" href="https://weibo.com/u/6366974701" title="weibo">weibo</a>
+                            
+                                <a class="fl rss"  target="_blank" href="/baidusitemap.xml" title="rss">rss</a>
+                            
+                                <a class="fl QQ"  target="_blank" href="http://qm.qq.com/cgi-bin/qm/qr?k=54nYD77unZK2f2IoGEkHOpiuy5WE_ldl" title="QQ">QQ</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/ASPCMS/" style="font-size: 10px;">ASPCMS</a> <a href="/tags/Github/" style="font-size: 10px;">Github</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Linux命令/" style="font-size: 10px;">Linux命令</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/WiFi攻击/" style="font-size: 10px;">WiFi攻击</a> <a href="/tags/badusb/" style="font-size: 10px;">badusb</a> <a href="/tags/cookie/" style="font-size: 10px;">cookie</a> <a href="/tags/ewebeditor/" style="font-size: 10px;">ewebeditor</a> <a href="/tags/getshell/" style="font-size: 10px;">getshell</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/xss/" style="font-size: 20px;">xss</a> <a href="/tags/代码/" style="font-size: 10px;">代码</a> <a href="/tags/思路/" style="font-size: 10px;">思路</a> <a href="/tags/批量/" style="font-size: 10px;">批量</a> <a href="/tags/无人机/" style="font-size: 10px;">无人机</a> <a href="/tags/无线攻击/" style="font-size: 20px;">无线攻击</a> <a href="/tags/木马/" style="font-size: 10px;">木马</a> <a href="/tags/极客/" style="font-size: 10px;">极客</a> <a href="/tags/注入/" style="font-size: 20px;">注入</a> <a href="/tags/渗透/" style="font-size: 10px;">渗透</a> <a href="/tags/渗透测试/" style="font-size: 10px;">渗透测试</a> <a href="/tags/硬件/" style="font-size: 10px;">硬件</a> <a href="/tags/突破/" style="font-size: 10px;">突破</a> <a href="/tags/脚本/" style="font-size: 10px;">脚本</a>
+                    </div>
+                </section>
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://www.ggsec.cn">Demonsec</a>
+                    
+                      <a target="_blank"  class="main-nav-link switch-friends-link" href="http://wangdalao.com">王大佬博客</a>
+                    
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">一个挖洞的小伙！！！</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">孤独常伴</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">孤独常伴</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">孤独常伴&#39;s Blog 网络安全--渗透测试--攻防演练--原创作品--黑客技术--web安全--SEO--系统安全--信息安全--编程交流--入侵</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="http://ka1i.org">博客首页</a></li>
+                
+                    <li><a href="/archives">文章归档</a></li>
+                
+                    <li><a href="/tags">标签列表</a></li>
+                
+                    <li><a href="/about">个人简历</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=Ajs7NTY0NjQyQnNzLGFtbw" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/l0n3rs" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://weibo.com/u/6366974701" title="weibo">weibo</a>
+                    
+                        <a class="rss" target="_blank" href="/baidusitemap.xml" title="rss">rss</a>
+                    
+                        <a class="QQ" target="_blank" href="http://qm.qq.com/cgi-bin/qm/qr?k=54nYD77unZK2f2IoGEkHOpiuy5WE_ldl" title="QQ">QQ</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-java" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2018/01/28/java/" class="article-date">
+      <time datetime="2018-01-28T04:00:37.000Z" itemprop="datePublished">2018-01-28</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java基础
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/编程语言/">编程语言</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
+<ol>
+<li>字符串有整型的相互转换<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">String a = String.valueOf(2);   //integer to numeric string   </div><div class="line">int i = Integer.parseInt(a); //numeric string to an int</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<a id="more"></a>
+<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
+<ol>
+<li><p>向文件末尾添加内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">BufferedWriter out = null;   </div><div class="line">try &#123;   </div><div class="line">    out = new BufferedWriter(new FileWriter(”filename”, true));   </div><div class="line">    out.write(”aString”);   </div><div class="line">&#125; catch (IOException e) &#123;   </div><div class="line">    // error processing code   </div><div class="line">&#125; finally &#123;   </div><div class="line">    if (out != null) &#123;   </div><div class="line">        out.close();   </div><div class="line">    &#125;   </div><div class="line">&#125;  </div><div class="line">``` </div><div class="line">3. 得到当前方法的名字</div><div class="line">``` </div><div class="line">String methodName = Thread.currentThread().getStackTrace()[1].getMethodName();</div></pre></td></tr></table></figure>
+</li>
+<li><p>转字符串到日期</p>
+<pre><code>java.util.Date = java.text.DateFormat.getDateInstance().parse(date String);
+</code></pre><p>或者是：</p>
+<pre><code>SimpleDateFormat format = new SimpleDateFormat( &quot;dd.MM.yyyy&quot; );   
+Date date = format.parse( myString );
+</code></pre></li>
+<li><p>使用JDBC链接Oracle</p>
+<pre><code>public class OracleJdbcTest   
+{   
+ String driverClass = &quot;oracle.jdbc.driver.OracleDriver&quot;;   
+
+ Connection con;   
+
+ public void init(FileInputStream fs) throws ClassNotFoundException, SQLException, FileNotFoundException, IOException   
+ {   
+     Properties props = new Properties();   
+     props.load(fs);   
+     String url = props.getProperty(&quot;db.url&quot;);   
+     String userName = props.getProperty(&quot;db.user&quot;);   
+     String password = props.getProperty(&quot;db.password&quot;);   
+     Class.forName(driverClass);   
+
+     con=DriverManager.getConnection(url, userName, password);   
+ }   
+
+ public void fetch() throws SQLException, IOException   
+ {   
+     PreparedStatement ps = con.prepareStatement(&quot;select SYSDATE from dual&quot;);   
+     ResultSet rs = ps.executeQuery();   
+
+     while (rs.next())   
+     {   
+         // do the thing you do   
+     }   
+     rs.close();   
+     ps.close();   
+ }   
+
+ public static void main(String[] args)   
+ {   
+     OracleJdbcTest test = new OracleJdbcTest();   
+     test.init();   
+     test.fetch();   
+ }   
+}
+</code></pre></li>
+<li>把 Java util.Date 转成 sql.Date<pre><code>java.util.Date utilDate = new java.util.Date();   
+java.sql.Date sqlDate = new java.sql.Date(utilDate.getTime());
+</code></pre></li>
+<li><p>使用NIO进行快速的文件拷贝</p>
+<pre><code>public static void fileCopy( File in, File out )   
+         throws IOException   
+ {   
+     FileChannel inChannel = new FileInputStream( in ).getChannel();   
+     FileChannel outChannel = new FileOutputStream( out ).getChannel();   
+     try  
+     {   
+//          inChannel.transferTo(0, inChannel.size(), outChannel);      // original -- apparently has trouble copying large files on Windows   
+
+         // magic number for Windows, 64Mb - 32Kb)   
+         int maxCount = (64 * 1024 * 1024) - (32 * 1024);   
+         long size = inChannel.size();   
+         long position = 0;   
+         while ( position &lt; size )   
+         {   
+            position += inChannel.transferTo( position, maxCount, outChannel );   
+         }   
+     }   
+     finally  
+     {   
+         if ( inChannel != null )   
+         {   
+            inChannel.close();   
+         }   
+         if ( outChannel != null )   
+         {   
+             outChannel.close();   
+         }   
+     }   
+ }
+</code></pre></li>
+<li><p>创建图片的缩略图</p>
+<pre><code>private void createThumbnail(String filename, int thumbWidth, int thumbHeight, int quality, String outFilename)   
+     throws InterruptedException, FileNotFoundException, IOException   
+ {   
+     // load image from filename   
+     Image image = Toolkit.getDefaultToolkit().getImage(filename);   
+     MediaTracker mediaTracker = new MediaTracker(new Container());   
+     mediaTracker.addImage(image, 0);   
+     mediaTracker.waitForID(0);   
+     // use this to test for errors at this point: System.out.println(mediaTracker.isErrorAny());   
+
+     // determine thumbnail size from WIDTH and HEIGHT   
+     double thumbRatio = (double)thumbWidth / (double)thumbHeight;   
+     int imageWidth = image.getWidth(null);   
+     int imageHeight = image.getHeight(null);   
+     double imageRatio = (double)imageWidth / (double)imageHeight;   
+     if (thumbRatio &lt; imageRatio) {   
+         thumbHeight = (int)(thumbWidth / imageRatio);   
+     } else {   
+         thumbWidth = (int)(thumbHeight * imageRatio);   
+     }   
+
+     // draw original image to thumbnail image object and   
+     // scale it to the new size on-the-fly   
+     BufferedImage thumbImage = new BufferedImage(thumbWidth, thumbHeight, BufferedImage.TYPE_INT_RGB);   
+     Graphics2D graphics2D = thumbImage.createGraphics();   
+     graphics2D.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);   
+     graphics2D.drawImage(image, 0, 0, thumbWidth, thumbHeight, null);   
+
+     // save thumbnail image to outFilename   
+     BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(outFilename));   
+     JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);   
+     JPEGEncodeParam param = encoder.getDefaultJPEGEncodeParam(thumbImage);   
+     quality = Math.max(0, Math.min(quality, 100));   
+     param.setQuality((float)quality / 100.0f, false);   
+     encoder.setJPEGEncodeParam(param);   
+     encoder.encode(thumbImage);   
+     out.close();   
+ }
+</code></pre></li>
+<li>创建 JSON 格式的数据<br>```<br>请先阅读这篇文章 了解一些细节，<br>并下面这个JAR 文件：json-rpc-1.0.jar (75 kb)</li>
+</ol>
+<p>import org.json.JSONObject;<br>…<br>…<br>JSONObject json = new JSONObject();<br>json.put(“city”, “Mumbai”);<br>json.put(“country”, “India”);<br>…<br>String output = json.toString();<br>…  </p>
+<pre><code>10. 使用iText JAR生成PDF
+
+阅读这篇文章 了解更多细节
+</code></pre><p>import java.io.File;<br>import java.io.FileOutputStream;<br>import java.io.OutputStream;<br>import java.util.Date;   </p>
+<p>import com.lowagie.text.Document;<br>import com.lowagie.text.Paragraph;<br>import com.lowagie.text.pdf.PdfWriter;   </p>
+<p>public class GeneratePDF {   </p>
+<pre><code>public static void main(String[] args) {   
+    try {   
+        OutputStream file = new FileOutputStream(new File(&quot;C:\\Test.pdf&quot;));   
+
+        Document document = new Document();   
+        PdfWriter.getInstance(document, file);   
+        document.open();   
+        document.add(new Paragraph(&quot;Hello Kiran&quot;));   
+        document.add(new Paragraph(new Date().toString()));   
+
+        document.close();   
+        file.close();   
+
+    } catch (Exception e) {   
+
+        e.printStackTrace();   
+    }   
+}   
+</code></pre><p>}  </p>
+<pre><code>11. HTTP 代理设置
+
+阅读这篇 文章 了解更多细节。
+</code></pre><p>System.getProperties().put(“http.proxyHost”, “someProxyURL”);<br>System.getProperties().put(“http.proxyPort”, “someProxyPort”);<br>System.getProperties().put(“http.proxyUser”, “someUserName”);<br>System.getProperties().put(“http.proxyPassword”, “somePassword”); </p>
+<pre><code>12. 单实例Singleton 示例
+
+请先阅读这篇文章 了解更多信息
+</code></pre><p>public class SimpleSingleton {<br>    private static SimpleSingleton singleInstance =  new SimpleSingleton();   </p>
+<pre><code>//Marking default constructor private   
+//to avoid direct instantiation.   
+private SimpleSingleton() {   
+}   
+
+//Get instance for class SimpleSingleton   
+public static SimpleSingleton getInstance() {   
+
+    return singleInstance;   
+}   
+</code></pre><p>}</p>
+<pre><code>另一种实现
+</code></pre><p>public enum SimpleSingleton {<br>    INSTANCE;<br>    public void doSomething() {<br>    }<br>}   </p>
+<p>//Call the method from Singleton:<br>SimpleSingleton.INSTANCE.doSomething();  </p>
+<pre><code>13. 抓屏程序
+
+阅读这篇文章 获得更多信息。
+</code></pre><p>import java.awt.Dimension;<br>import java.awt.Rectangle;<br>import java.awt.Robot;<br>import java.awt.Toolkit;<br>import java.awt.image.BufferedImage;<br>import javax.imageio.ImageIO;<br>import java.io.File;   </p>
+<p>…   </p>
+<p>public void captureScreen(String fileName) throws Exception {   </p>
+<p>   Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();<br>   Rectangle screenRectangle = new Rectangle(screenSize);<br>   Robot robot = new Robot();<br>   BufferedImage image = robot.createScreenCapture(screenRectangle);<br>   ImageIO.write(image, “png”, new File(fileName));   </p>
+<p>}<br>…  </p>
+<pre><code>14. 列出文件和目录
+</code></pre><p>File dir = new File(“directoryName”);<br>  String[] children = dir.list();<br>  if (children == null) {<br>      // Either dir does not exist or is not a directory<br>  } else {<br>      for (int i=0; i &lt; children.length; i++) {<br>          // Get filename of file or directory<br>          String filename = children[i];<br>      }<br>  }   </p>
+<p>  // It is also possible to filter the list of returned files.<br>  // This example does not return any files that start with `.’.<br>  FilenameFilter filter = new FilenameFilter() {<br>      public boolean accept(File dir, String name) {<br>          return !name.startsWith(“.”);<br>      }<br>  };<br>  children = dir.list(filter);   </p>
+<p>  // The list of files can also be retrieved as File objects<br>  File[] files = dir.listFiles();   </p>
+<p>  // This filter only returns directories<br>  FileFilter fileFilter = new FileFilter() {<br>      public boolean accept(File file) {<br>          return file.isDirectory();<br>      }<br>  };<br>  files = dir.listFiles(fileFilter);  </p>
+<pre><code>15. 创建ZIP和JAR文件
+</code></pre><p>import java.util.zip.<em>;<br>import java.io.</em>;   </p>
+<p>public class ZipIt {<br>    public static void main(String args[]) throws IOException {<br>        if (args.length &lt; 2) {<br>            System.err.println(“usage: java ZipIt Zip.zip file1 file2 file3”);<br>            System.exit(-1);<br>        }<br>        File zipFile = new File(args[0]);<br>        if (zipFile.exists()) {<br>            System.err.println(“Zip file already exists, please try another”);<br>            System.exit(-2);<br>        }<br>        FileOutputStream fos = new FileOutputStream(zipFile);<br>        ZipOutputStream zos = new ZipOutputStream(fos);<br>        int bytesRead;<br>        byte[] buffer = new byte[1024];<br>        CRC32 crc = new CRC32();<br>        for (int i=1, n=args.length; i &lt; n; i++) {<br>            String name = args[i];<br>            File file = new File(name);<br>            if (!file.exists()) {<br>                System.err.println(“Skipping: “ + name);<br>                continue;<br>            }<br>            BufferedInputStream bis = new BufferedInputStream(<br>                new FileInputStream(file));<br>            crc.reset();<br>            while ((bytesRead = bis.read(buffer)) != -1) {<br>                crc.update(buffer, 0, bytesRead);<br>            }<br>            bis.close();<br>            // Reset to beginning of input stream<br>            bis = new BufferedInputStream(<br>                new FileInputStream(file));<br>            ZipEntry entry = new ZipEntry(name);<br>            entry.setMethod(ZipEntry.STORED);<br>            entry.setCompressedSize(file.length());<br>            entry.setSize(file.length());<br>            entry.setCrc(crc.getValue());<br>            zos.putNextEntry(entry);<br>            while ((bytesRead = bis.read(buffer)) != -1) {<br>                zos.write(buffer, 0, bytesRead);<br>            }<br>            bis.close();<br>        }<br>        zos.close();<br>    }<br>}  </p>
+<pre><code>16. 解析/读取XML 文件
+</code></pre><p>XML文件</p>
+<p>&lt;?xml version=”1.0”?&gt;  </p>
+<p><students><br>    <student><br>        <name>John</name><br>        <grade>B</grade><br>        <age>12</age><br>    </student><br>    <student><br>        <name>Mary</name><br>        <grade>A</grade><br>        <age>11</age><br>    </student><br>    <student><br>        <name>Simon</name><br>        <grade>A</grade><br>        <age>18</age><br>    </student><br></students></p>
+<pre><code>Java代码：
+</code></pre><p>ackage net.viralpatel.java.xmlparser;   </p>
+<p>import java.io.File;<br>import javax.xml.parsers.DocumentBuilder;<br>import javax.xml.parsers.DocumentBuilderFactory;   </p>
+<p>import org.w3c.dom.Document;<br>import org.w3c.dom.Element;<br>import org.w3c.dom.Node;<br>import org.w3c.dom.NodeList;   </p>
+<p>public class XMLParser {   </p>
+<pre><code>public void getAllUserNames(String fileName) {   
+    try {   
+        DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();   
+        DocumentBuilder db = dbf.newDocumentBuilder();   
+        File file = new File(fileName);   
+        if (file.exists()) {   
+            Document doc = db.parse(file);   
+            Element docEle = doc.getDocumentElement();   
+
+            // Print root element of the document   
+            System.out.println(&quot;Root element of the document: &quot;  
+                    + docEle.getNodeName());   
+
+            NodeList studentList = docEle.getElementsByTagName(&quot;student&quot;);   
+
+            // Print total student elements in document   
+            System.out   
+                    .println(&quot;Total students: &quot; + studentList.getLength());   
+
+            if (studentList != null &amp;&amp; studentList.getLength() &gt; 0) {   
+                for (int i = 0; i &lt; studentList.getLength(); i++) {   
+
+                    Node node = studentList.item(i);   
+
+                    if (node.getNodeType() == Node.ELEMENT_NODE) {   
+
+                        System.out   
+                                .println(&quot;=====================&quot;);   
+
+                        Element e = (Element) node;   
+                        NodeList nodeList = e.getElementsByTagName(&quot;name&quot;);   
+                        System.out.println(&quot;Name: &quot;  
+                                + nodeList.item(0).getChildNodes().item(0)   
+                                        .getNodeValue());   
+
+                        nodeList = e.getElementsByTagName(&quot;grade&quot;);   
+                        System.out.println(&quot;Grade: &quot;  
+                                + nodeList.item(0).getChildNodes().item(0)   
+                                        .getNodeValue());   
+
+                        nodeList = e.getElementsByTagName(&quot;age&quot;);   
+                        System.out.println(&quot;Age: &quot;  
+                                + nodeList.item(0).getChildNodes().item(0)   
+                                        .getNodeValue());   
+                    }   
+                }   
+            } else {   
+                System.exit(1);   
+            }   
+        }   
+    } catch (Exception e) {   
+        System.out.println(e);   
+    }   
+}   
+public static void main(String[] args) {   
+
+    XMLParser parser = new XMLParser();   
+    parser.getAllUserNames(&quot;c:\\test.xml&quot;);   
+}   
+</code></pre><p>}  </p>
+<pre><code>17. 把 Array 转换成 Map
+</code></pre><p>import java.util.Map;<br>import org.apache.commons.lang.ArrayUtils;   </p>
+<p>public class Main {   </p>
+<p>  public static void main(String[] args) {<br>    String[][] countries = { { “United States”, “New York” }, { “United Kingdom”, “London” },<br>        { “Netherland”, “Amsterdam” }, { “Japan”, “Tokyo” }, { “France”, “Paris” } };   </p>
+<pre><code>Map countryCapitals = ArrayUtils.toMap(countries);   
+
+System.out.println(&quot;Capital of Japan is &quot; + countryCapitals.get(&quot;Japan&quot;));   
+System.out.println(&quot;Capital of France is &quot; + countryCapitals.get(&quot;France&quot;));   
+</code></pre><p>  }<br>}  </p>
+<pre><code>18. 发送邮件
+</code></pre><p>import javax.mail.<em>;<br>import javax.mail.internet.</em>;<br>import java.util.*;   </p>
+<p>public void postMail( String recipients[ ], String subject, String message , String from) throws MessagingException<br>{<br>    boolean debug = false;   </p>
+<pre><code> //Set the host smtp address   
+ Properties props = new Properties();   
+ props.put(&quot;mail.smtp.host&quot;, &quot;smtp.example.com&quot;);   
+
+// create some properties and get the default Session   
+Session session = Session.getDefaultInstance(props, null);   
+session.setDebug(debug);   
+
+// create a message   
+Message msg = new MimeMessage(session);   
+
+// set the from and to address   
+InternetAddress addressFrom = new InternetAddress(from);   
+msg.setFrom(addressFrom);   
+
+InternetAddress[] addressTo = new InternetAddress[recipients.length];   
+for (int i = 0; i &lt; recipients.length; i++)   
+{   
+    addressTo[i] = new InternetAddress(recipients[i]);   
+}   
+msg.setRecipients(Message.RecipientType.TO, addressTo);   
+
+// Optional : You can also set your custom headers in the Email if you Want   
+msg.addHeader(&quot;MyHeaderName&quot;, &quot;myHeaderValue&quot;);   
+
+// Setting the Subject and Content Type   
+msg.setSubject(subject);   
+msg.setContent(message, &quot;text/plain&quot;);   
+Transport.send(msg);   
+</code></pre><p>}  </p>
+<pre><code>19. 发送代数据的HTTP 请求
+</code></pre><p>import java.io.BufferedReader;<br>import java.io.InputStreamReader;<br>import java.net.URL;   </p>
+<p>public class Main {<br>    public static void main(String[] args)  {<br>        try {<br>            URL my_url = new URL(“<a href="http://coolshell.cn/" target="_blank" rel="external">http://coolshell.cn/</a>“);<br>            BufferedReader br = new BufferedReader(new InputStreamReader(my_url.openStream()));<br>            String strTemp = “”;<br>            while(null != (strTemp = br.readLine())){<br>            System.out.println(strTemp);<br>        }<br>        } catch (Exception ex) {<br>            ex.printStackTrace();<br>        }<br>    }<br>} </p>
+<pre><code>20. 改变数组的大小
+</code></pre><p>/**  </p>
+<ul>
+<li>Reallocates an array with a new size, and copies the contents  </li>
+<li>of the old array to the new array.  </li>
+<li>@param oldArray  the old array, to be reallocated.  </li>
+<li>@param newSize   the new array size.  </li>
+<li>@return          A new array with the same contents.<br>*/<br>private static Object resizeArray (Object oldArray, int newSize) {<br> int oldSize = java.lang.reflect.Array.getLength(oldArray);<br> Class elementType = oldArray.getClass().getComponentType();<br> Object newArray = java.lang.reflect.Array.newInstance(   <pre><code>elementType,newSize);   
+</code></pre> int preserveLength = Math.min(oldSize,newSize);<br> if (preserveLength &gt; 0)   <pre><code>System.arraycopy (oldArray,0,newArray,0,preserveLength);   
+</code></pre> return newArray;<br>}   </li>
+</ul>
+<p>// Test routine for resizeArray().<br>public static void main (String[] args) {<br>   int[] a = {1,2,3};<br>   a = (int[])resizeArray(a,5);<br>   a[3] = 4;<br>   a[4] = 5;<br>   for (int i=0; i&lt;a.length; i++)<br>      System.out.println (a[i]);<br>}<br>```<br>以上是20个非常有用的java程序代码，希望对大家学习Java有所帮助</p>
+
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/01/28/java/">Java基础</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 孤独常伴 的个人博客">孤独常伴</a></p>
+        <p><span>发布时间:</span>2018年01月28日 - 12时00分</p>
+        <p><span>最后更新:</span>2018年01月28日 - 12时13分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/01/28/java/" title="Java基础">http://ka1i.org/2018/01/28/java/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://ka1i.org/2018/01/28/java/　　作者: 孤独常伴" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2018/01/28/linux/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          Linux命令
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/01/28/wifi/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">常用十个Wifi攻击工具</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+        <section class="youyan" id="comments">
+  <div id="uyan_frame"></div>
+  <script src="http://v2.uyan.cc/code/uyan.js?uid=2156572"></script>
+</section>
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2018/01/28/linux/" title="上一篇: Linux命令">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/01/28/wifi/" title="下一篇: 常用十个Wifi攻击工具">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/01/28/clean/">clean</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/28/linux/">Linux命令</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/28/java/">Java基础</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/28/wifi/">常用十个Wifi攻击工具</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/27/badusb/">Badusb FTP传马脚本</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/25/edit/">编辑器渗透思路</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/25/cookie/">cookie注入</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/25/sql/">SQL注入关键字</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/25/xsslist/">一些实用的XSS代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/25/xsstp/">突破XSS字符数量限制执行任意JS代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/01/23/wrj/">迫降无人机</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/23/hexo/">Github搭建Hexo博客</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/22/ajax-jsonp/">ajax和jsonp区别</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/22/server-config/">ubuntu服务器详细配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/10/21/aspcms/">ASPCMS批量测试脚本</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+
+
+    
+        <section class="youyan" id="comments">
+  <div id="uyan_frame"></div>
+  <script src="http://v2.uyan.cc/code/uyan.js?uid=2156572"></script>
+</section>
+    
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2018 孤独常伴
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="http://ka1i.org" target="_blank">孤独常伴</a> by l0n3rs
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+    <script type="text/javascript">
+      window.onload = function(){
+        document.getElementById("search").onclick = function(){
+            console.log("search")
+            search();
+        }
+      }
+      function search(){
+        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
+      }
+    </script>
+
+  </div>
+</body>
+</html>

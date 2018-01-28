@@ -1,6 +1,6 @@
+http://ka1i.org/2018/01/28/clean/
+http://ka1i.org/2018/01/28/linux/
+http://ka1i.org/2018/01/28/java/
 http://ka1i.org/2018/01/28/wifi/
 http://ka1i.org/2018/01/27/badusb/
 http://ka1i.org/2018/01/25/edit/
-http://ka1i.org/2018/01/25/cookie/
-http://ka1i.org/2018/01/25/sql/
-http://ka1i.org/2018/01/25/xsslist/
