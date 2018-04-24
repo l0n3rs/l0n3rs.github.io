@@ -4,7 +4,27 @@
 
     
   <url>
-    <loc>http://ka1i.org/txst/</loc>
+    <loc>https://ka1i.org/ajax-jsonp/</loc>
+    <lastmod>2018-04-24T11:28:09.855Z</lastmod>
+    <data>
+        <display>
+        <title>ajax和jsonp区别</title>
+        <pubTime>2017-10-22T12:54:16.000Z</pubTime>
+        
+        <tag>http</tag>
+         
+         
+           
+             
+              <breadCrumb title="编程语言" url="https://ka1i.org/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://ka1i.org/txst/</loc>
     <lastmod>2018-01-30T10:50:25.126Z</lastmod>
     <data>
         <display>
@@ -18,7 +38,7 @@
          
            
              
-              <breadCrumb title="渗透测试" url="http://ka1i.org/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+              <breadCrumb title="渗透测试" url="https://ka1i.org/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
           
         </display>
     </data>
@@ -26,7 +46,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/java/</loc>
+    <loc>https://ka1i.org/java/</loc>
     <lastmod>2018-01-28T04:34:21.200Z</lastmod>
     <data>
         <display>
@@ -38,7 +58,7 @@
          
            
              
-              <breadCrumb title="编程语言" url="http://ka1i.org/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+              <breadCrumb title="编程语言" url="https://ka1i.org/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
           
         </display>
     </data>
@@ -46,7 +66,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/linux/</loc>
+    <loc>https://ka1i.org/linux/</loc>
     <lastmod>2018-01-28T04:13:03.314Z</lastmod>
     <data>
         <display>
@@ -58,7 +78,7 @@
          
            
              
-              <breadCrumb title="Linux" url="http://ka1i.org/categories/Linux/"/>
+              <breadCrumb title="Linux" url="https://ka1i.org/categories/Linux/"/>
           
         </display>
     </data>
@@ -66,21 +86,21 @@
 
     
   <url>
-    <loc>http://ka1i.org/wifi/</loc>
+    <loc>https://ka1i.org/wifi/</loc>
     <lastmod>2018-01-28T03:37:25.714Z</lastmod>
     <data>
         <display>
         <title>常用十个Wifi攻击工具</title>
         <pubTime>2018-01-28T03:29:49.000Z</pubTime>
         
-        <tag>WiFi攻击</tag>
-         
         <tag>无线攻击</tag>
+         
+        <tag>WiFi攻击</tag>
          
          
            
              
-              <breadCrumb title="无线攻击" url="http://ka1i.org/categories/%E6%97%A0%E7%BA%BF%E6%94%BB%E5%87%BB/"/>
+              <breadCrumb title="无线攻击" url="https://ka1i.org/categories/%E6%97%A0%E7%BA%BF%E6%94%BB%E5%87%BB/"/>
           
         </display>
     </data>
@@ -88,7 +108,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/cookie/</loc>
+    <loc>https://ka1i.org/cookie/</loc>
     <lastmod>2018-01-28T03:34:27.069Z</lastmod>
     <data>
         <display>
@@ -102,7 +122,7 @@
          
            
              
-              <breadCrumb title="注入" url="http://ka1i.org/categories/%E6%B3%A8%E5%85%A5/"/>
+              <breadCrumb title="注入" url="https://ka1i.org/categories/%E6%B3%A8%E5%85%A5/"/>
           
         </display>
     </data>
@@ -110,7 +130,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/hexo/</loc>
+    <loc>https://ka1i.org/hexo/</loc>
     <lastmod>2018-01-28T03:34:07.786Z</lastmod>
     <data>
         <display>
@@ -124,7 +144,7 @@
          
            
              
-              <breadCrumb title="建站" url="http://ka1i.org/categories/%E5%BB%BA%E7%AB%99/"/>
+              <breadCrumb title="建站" url="https://ka1i.org/categories/%E5%BB%BA%E7%AB%99/"/>
           
         </display>
     </data>
@@ -132,7 +152,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/sql/</loc>
+    <loc>https://ka1i.org/sql/</loc>
     <lastmod>2018-01-28T03:32:24.014Z</lastmod>
     <data>
         <display>
@@ -146,7 +166,7 @@
          
            
              
-              <breadCrumb title="注入" url="http://ka1i.org/categories/%E6%B3%A8%E5%85%A5/"/>
+              <breadCrumb title="注入" url="https://ka1i.org/categories/%E6%B3%A8%E5%85%A5/"/>
           
         </display>
     </data>
@@ -154,7 +174,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/badusb/</loc>
+    <loc>https://ka1i.org/badusb/</loc>
     <lastmod>2018-01-27T11:06:04.181Z</lastmod>
     <data>
         <display>
@@ -176,7 +196,7 @@
          
            
              
-              <breadCrumb title="BadUsb" url="http://ka1i.org/categories/BadUsb/"/>
+              <breadCrumb title="BadUsb" url="https://ka1i.org/categories/BadUsb/"/>
           
         </display>
     </data>
@@ -184,7 +204,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/server-config/</loc>
+    <loc>https://ka1i.org/server-config/</loc>
     <lastmod>2018-01-27T11:05:56.088Z</lastmod>
     <data>
         <display>
@@ -196,7 +216,7 @@
          
            
              
-              <breadCrumb title="开发工具" url="http://ka1i.org/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+              <breadCrumb title="开发工具" url="https://ka1i.org/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
           
         </display>
     </data>
@@ -204,7 +224,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/aspcms/</loc>
+    <loc>https://ka1i.org/aspcms/</loc>
     <lastmod>2018-01-27T11:01:18.208Z</lastmod>
     <data>
         <display>
@@ -220,7 +240,7 @@
          
            
              
-              <breadCrumb title="脚本" url="http://ka1i.org/categories/%E8%84%9A%E6%9C%AC/"/>
+              <breadCrumb title="脚本" url="https://ka1i.org/categories/%E8%84%9A%E6%9C%AC/"/>
           
         </display>
     </data>
@@ -228,27 +248,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/ajax-jsonp/</loc>
-    <lastmod>2018-01-27T11:00:19.483Z</lastmod>
-    <data>
-        <display>
-        <title>ajax和jsonp区别</title>
-        <pubTime>2017-10-22T12:54:16.000Z</pubTime>
-        
-        <tag>http</tag>
-         
-         
-           
-             
-              <breadCrumb title="编程语言" url="http://ka1i.org/categories/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://ka1i.org/edit/</loc>
+    <loc>https://ka1i.org/edit/</loc>
     <lastmod>2018-01-25T13:13:30.145Z</lastmod>
     <data>
         <display>
@@ -264,7 +264,7 @@
          
            
              
-              <breadCrumb title="渗透" url="http://ka1i.org/categories/%E6%B8%97%E9%80%8F/"/>
+              <breadCrumb title="渗透" url="https://ka1i.org/categories/%E6%B8%97%E9%80%8F/"/>
           
         </display>
     </data>
@@ -272,7 +272,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/xsstp/</loc>
+    <loc>https://ka1i.org/xsstp/</loc>
     <lastmod>2018-01-25T11:06:59.986Z</lastmod>
     <data>
         <display>
@@ -286,7 +286,7 @@
          
            
              
-              <breadCrumb title="XSS" url="http://ka1i.org/categories/XSS/"/>
+              <breadCrumb title="XSS" url="https://ka1i.org/categories/XSS/"/>
           
         </display>
     </data>
@@ -294,7 +294,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/xsslist/</loc>
+    <loc>https://ka1i.org/xsslist/</loc>
     <lastmod>2018-01-25T09:22:48.091Z</lastmod>
     <data>
         <display>
@@ -308,7 +308,7 @@
          
            
              
-              <breadCrumb title="XSS" url="http://ka1i.org/categories/XSS/"/>
+              <breadCrumb title="XSS" url="https://ka1i.org/categories/XSS/"/>
           
         </display>
     </data>
@@ -316,7 +316,7 @@
 
     
   <url>
-    <loc>http://ka1i.org/wrj/</loc>
+    <loc>https://ka1i.org/wrj/</loc>
     <lastmod>2018-01-23T04:05:39.927Z</lastmod>
     <data>
         <display>
@@ -332,7 +332,7 @@
          
            
              
-              <breadCrumb title="无线攻击" url="http://ka1i.org/categories/%E6%97%A0%E7%BA%BF%E6%94%BB%E5%87%BB/"/>
+              <breadCrumb title="无线攻击" url="https://ka1i.org/categories/%E6%97%A0%E7%BA%BF%E6%94%BB%E5%87%BB/"/>
           
         </display>
     </data>

@@ -1,6 +1,6 @@
-http://ka1i.org/txst/
-http://ka1i.org/linux/
-http://ka1i.org/java/
-http://ka1i.org/wifi/
-http://ka1i.org/badusb/
-http://ka1i.org/edit/
+https://ka1i.org/txst/
+https://ka1i.org/linux/
+https://ka1i.org/java/
+https://ka1i.org/wifi/
+https://ka1i.org/badusb/
+https://ka1i.org/edit/

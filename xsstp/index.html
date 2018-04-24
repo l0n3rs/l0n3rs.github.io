@@ -5,14 +5,14 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://ka1i.org">
+  <link rel="dns-prefetch" href="https://ka1i.org">
   <title>突破XSS字符数量限制执行任意JS代码 | 孤独常伴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="####一、综述
 有些XSS漏洞由于字符数量有限制而没法有效的利用，只能弹出一个对话框来YY，本文主要讨论如何突破字符数量的限制进行有效的利用，这里对有效利用的定义是可以不受限制执行任意JS。对于跨站师们来说，研究极端情况下XSS利用的可能性是一种乐趣；对于产品安全人员来说，不受限制的利用的可能是提供给开发人员最有力的证据，要求他们重视并修补这些极端情况下的XSS漏洞。突破的方法有很多种，但是突">
 <meta property="og:type" content="article">
 <meta property="og:title" content="突破XSS字符数量限制执行任意JS代码">
-<meta property="og:url" content="http://ka1i.org/xsstp/index.html">
+<meta property="og:url" content="https://ka1i.org/xsstp/index.html">
 <meta property="og:site_name" content="孤独常伴">
 <meta property="og:description" content="####一、综述
 有些XSS漏洞由于字符数量有限制而没法有效的利用，只能弹出一个对话框来YY，本文主要讨论如何突破字符数量的限制进行有效的利用，这里对有效利用的定义是可以不受限制执行任意JS。对于跨站师们来说，研究极端情况下XSS利用的可能性是一种乐趣；对于产品安全人员来说，不受限制的利用的可能是提供给开发人员最有力的证据，要求他们重视并修补这些极端情况下的XSS漏洞。突破的方法有很多种，但是突">
@@ -55,7 +55,7 @@
 		  <h1 class="header-author"><a href="/">孤独常伴</a></h1>
 		</hgroup>
 		
-		<p class="header-subtitle">孤独常伴&#39;s Blog 网络安全--渗透测试--攻防演练--原创作品--黑客技术--web安全--SEO--系统安全--信息安全--编程交流--入侵</p>
+		<p class="header-subtitle">信安路上的前行者</p>
 		
 
 		<nav class="header-menu">
@@ -89,9 +89,7 @@
 				
 					<a class="github" target="_blank" href="https://github.com/l0n3rs" title="github"><i class="icon-github"></i></a>
 		        
-					<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-		        
-					<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+					<a class="rss" target="_blank" href="https://ka1i.org/sitemap.xml" title="rss"><i class="icon-rss"></i></a>
 		        
 					<a class="qq" target="_blank" href="/99746460" title="qq"><i class="icon-qq"></i></a>
 		        
@@ -117,7 +115,7 @@
 			  <h1 class="header-author js-header-author">孤独常伴</h1>
 			</hgroup>
 			
-			<p class="header-subtitle"><i class="icon icon-quo-left"></i>孤独常伴&#39;s Blog 网络安全--渗透测试--攻防演练--原创作品--黑客技术--web安全--SEO--系统安全--信息安全--编程交流--入侵<i class="icon icon-quo-right"></i></p>
+			<p class="header-subtitle"><i class="icon icon-quo-left"></i>信安路上的前行者<i class="icon icon-quo-right"></i></p>
 			
 			
 			
@@ -134,9 +132,7 @@
 					
 						<a class="github" target="_blank" href="https://github.com/l0n3rs" title="github"><i class="icon-github"></i></a>
 			        
-						<a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+						<a class="rss" target="_blank" href="https://ka1i.org/sitemap.xml" title="rss"><i class="icon-rss"></i></a>
 			        
 						<a class="qq" target="_blank" href="/99746460" title="qq"><i class="icon-qq"></i></a>
 			        
@@ -375,7 +371,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://ka1i.org/xsstp/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ka1i.org/xsstp/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -551,18 +547,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ASPCMS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">批量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">getshell</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">badusb</a>
               </li>
              
@@ -587,14 +571,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">注入</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ewebeditor</a>
               </li>
              
@@ -607,15 +583,35 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">注入</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ASPCMS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">批量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">getshell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Linux命令</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Linux命令</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -632,10 +628,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">思路分享</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">WiFi攻击</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -656,6 +648,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">突破</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">WiFi攻击</a>
               </li>
              
               <li class="article-tag-list-item">
