@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="孤独常伴">
 <meta property="og:description" content="文件操作：123456789101112131415pwd -当前所在目录ls 显示当前文件夹下的详细信息ls -l 以列表显示ls -l | more 以列表方式分页显示cd 切换目录mkdir 新建文件夹rmdir 删除空文件夹touch 建立空文件du 用于查看文件或文件夹的大小:du 123.txtcp 复制 cp 123.txt /home/123.txtln -s 连接（和win下的快">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-28T04:13:03.315Z">
+<meta property="og:updated_time" content="2018-04-25T11:14:35.022Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux命令">
 <meta name="twitter:description" content="文件操作：123456789101112131415pwd -当前所在目录ls 显示当前文件夹下的详细信息ls -l 以列表显示ls -l | more 以列表方式分页显示cd 切换目录mkdir 新建文件夹rmdir 删除空文件夹touch 建立空文件du 用于查看文件或文件夹的大小:du 123.txtcp 复制 cp 123.txt /home/123.txtln -s 连接（和win下的快">
@@ -199,6 +199,13 @@
 <p>alias用法:<br>作用:给命令加个别名(自定义命令)<br>如:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ls -l /home</span><br><span class="line">alias llh=&apos;ls -l /home&apos; #之后就是以用llh来运行ls -l /home了</span><br></pre></td></tr></table></figure></p>
 <p>进程及任务管理命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">ps 查看进程</span><br><span class="line">相关参数: -a 当前窗口的全部进程 -u 用户名 #查看用户的进程 -x查看全部进程</span><br><span class="line">-e 可看全部进程 -f全格式 -l长格式</span><br><span class="line">top 动态查看进程</span><br><span class="line">交互命令:h帮助 m切换显示内存信息 t切换显示进程和CPU状态信息</span><br><span class="line">c切换显示名称和完整命令行 M根据驻留内存大小排列</span><br><span class="line">P 根据CPU使用百分比排列</span><br><span class="line">kill 结束进程 </span><br><span class="line">kill -9 进程号 强制结束进程</span><br><span class="line">cron 显示调度任务</span><br><span class="line">crontab -l 查看当前用户的已经存在的任务</span><br><span class="line">iostat 统计并输出CPU使用信息及特定设备或分区的IO 信息</span><br><span class="line">iostat -c 仅显示CPU使用情况统计信息 </span><br><span class="line">iostat -d 仅显示设备/分区使用情况统计信息 </span><br><span class="line">iostat -d 2 统计设备/分区使用情况并每隔2秒刷新一次</span><br></pre></td></tr></table></figure></p>
 <p>linux系统启动过程:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">1.BOIS自检</span><br><span class="line">2.启动GRUB/LILO</span><br><span class="line">3.运行linux内核并检测硬件</span><br><span class="line">4.运行系统的第一个进程init</span><br><span class="line">5.init读取系统引导配置文件/etc/inittab中信息进行初始化</span><br><span class="line">6./etc/rc.d/rc.sysinit系统初始化脚本</span><br><span class="line">7./etc/rc.d/rcX.d/[KS]* - 根据运行级别X配置服务</span><br><span class="line">终止以K开头的服务</span><br><span class="line">启动以S开头的服务</span><br><span class="line">8./etc/rc.d/rc.local执行本地特殊配置</span><br><span class="line">9.其它服务</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<ul>
+<li>本便携版以及本文均使用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>协议；</li>
+<li>本文所有权归 <a href="http://ka1i.org">孤独常伴</a> 所有；</li>
+<li>转载请著名:Ka1i.org</li>
+</ul>
+</blockquote>
 
       
 
@@ -500,6 +507,18 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">安卓</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">渗透测试</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Pentest</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">badusb</a>
               </li>
              
@@ -512,23 +531,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">渗透测试</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">硬件</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">极客</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">安卓</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Pentest</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -548,6 +555,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">ewebeditor</a>
               </li>
              
@@ -560,10 +571,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Linux命令</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Github</a>
               </li>
              
@@ -572,11 +579,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">Linux命令</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">思路分享</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -597,10 +608,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
