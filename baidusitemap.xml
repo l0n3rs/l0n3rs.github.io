@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>https://ka1i.org/emlog/</loc>
+    <lastmod>2018-04-25T04:30:27.783Z</lastmod>
+    <data>
+        <display>
+        <title>emlog</title>
+        <pubTime>2018-04-25T04:20:32.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://ka1i.org/azst/</loc>
     <lastmod>2018-04-25T04:11:29.511Z</lastmod>
     <data>
@@ -11,9 +26,9 @@
         <title>利用Pentestbox渗透安卓手机</title>
         <pubTime>2018-04-25T03:42:34.000Z</pubTime>
         
-        <tag>渗透测试</tag>
-         
         <tag>安卓</tag>
+         
+        <tag>渗透测试</tag>
          
         <tag>Pentest</tag>
          
@@ -137,9 +152,9 @@
         <title>常用十个Wifi攻击工具</title>
         <pubTime>2018-01-28T03:29:49.000Z</pubTime>
         
-        <tag>WiFi攻击</tag>
-         
         <tag>无线攻击</tag>
+         
+        <tag>WiFi攻击</tag>
          
          
            
@@ -225,13 +240,13 @@
         <title>Badusb FTP传马脚本</title>
         <pubTime>2018-01-27T11:02:35.000Z</pubTime>
         
+        <tag>渗透测试</tag>
+         
         <tag>badusb</tag>
          
         <tag>脚本</tag>
          
         <tag>木马</tag>
-         
-        <tag>渗透测试</tag>
          
         <tag>硬件</tag>
          
