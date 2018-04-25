@@ -6,20 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ka1i.org">
-  <title>ubuntu服务器详细配置 | 孤独常伴</title>
+  <title>Tag: emlog | 孤独常伴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ubuntu服务器私人定制： 把ubuntu服务器打造成自己的个性服务器，装逼必备！！！ ##　说明此教程针对Ubuntu14,其他版本仅作参考">
-<meta name="keywords" content="ubuntu服务器详细配置">
-<meta property="og:type" content="article">
-<meta property="og:title" content="ubuntu服务器详细配置">
-<meta property="og:url" content="https://ka1i.org/server-config/index.html">
+  <meta name="description" content="孤独常伴 信息安全 - 漏洞复现 - 原创分享 - SEO优化 - 渗透测试 - 逆向破解">
+<meta name="keywords" content="孤独常伴,孤独常伴&#39;s Blog,信息安全,漏洞复现,原创分享,SEO优化,渗透测试">
+<meta property="og:type" content="website">
+<meta property="og:title" content="孤独常伴">
+<meta property="og:url" content="https://ka1i.org/tags/emlog/index.html">
 <meta property="og:site_name" content="孤独常伴">
-<meta property="og:description" content="ubuntu服务器私人定制： 把ubuntu服务器打造成自己的个性服务器，装逼必备！！！ ##　说明此教程针对Ubuntu14,其他版本仅作参考">
+<meta property="og:description" content="孤独常伴 信息安全 - 漏洞复现 - 原创分享 - SEO优化 - 渗透测试 - 逆向破解">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-01-27T11:05:56.089Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ubuntu服务器详细配置">
-<meta name="twitter:description" content="ubuntu服务器私人定制： 把ubuntu服务器打造成自己的个性服务器，装逼必备！！！ ##　说明此教程针对Ubuntu14,其他版本仅作参考">
+<meta name="twitter:title" content="孤独常伴">
+<meta name="twitter:description" content="孤独常伴 信息安全 - 漏洞复现 - 原创分享 - SEO优化 - 渗透测试 - 逆向破解">
   
     <link rel="alternative" href="/atom.xml" title="孤独常伴" type="application/atom+xml">
   
@@ -161,304 +160,79 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-server-config" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      ubuntu服务器详细配置
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/emlog/" class="archive-article-date">
+  	<time datetime="2018-04-25T04:20:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/emlog/">emlog信息泄露漏洞</a>
     </h1>
   
 
-        
-        <a href="/server-config/" class="archive-article-date">
-  	<time datetime="2017-10-22T12:36:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-22</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong> ubuntu服务器私人定制：</strong> <excerpt in="" index="" |="" 首页摘要=""><br>把ubuntu服务器打造成自己的个性服务器，装逼必备！！！</excerpt></p>
-<p>##　说明<br><strong>此教程针对Ubuntu14,其他版本仅作参考</strong><br><a id="more"></a></p>
-<p><the rest="" of="" contents="" |="" 余下全文=""></the></p>
-<p>##　用户密码管理<br><code>sudo passwd root</code></p>
-<ol>
-<li>添加一个用户组并指定id为1002<br><code>sudo groupadd －g 1002 www</code></li>
-<li><p>添加一个用户到www组并指定id为1003<br><code>sudo useradd wyx -g 1002 -u 1003 -m</code></p>
-</li>
-<li><p>修改用户的密码<br><code>sudo passwd wyx</code></p>
-</li>
-<li><p>删除一个用户<br><code>sudo userdel wyx</code></p>
-</li>
-<li><p>为该用户添加sudo权限</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo usermod <span class="_">-a</span> -G adm wyx</span><br><span class="line">sudo usermod <span class="_">-a</span> -G sudo wyx</span><br></pre></td></tr></table></figure>
-<ol>
-<li>查看所有用户和用户组：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/passwd</span><br><span class="line">cat /etc/group</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h2 id="安装nodejs"><a href="#安装nodejs" class="headerlink" title="安装nodejs"></a>安装nodejs</h2><ol>
-<li>安装nvm<code>curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash</code></li>
-<li>安装node<code>nvm install v4.4.4</code>,安装<code>nvm install v6.9.1</code></li>
-<li>设置默认的node版本<code>nvm alias default v4.4.4</code></li>
-<li>安装npm3  <code>npm install -g npm@3</code></li>
-<li>设置淘宝的cnpm源  <code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li>
-<li>验证安装<code>node -v,npm -v,cnpm -v</code><h2 id="安装node常用包"><a href="#安装node常用包" class="headerlink" title="安装node常用包"></a>安装node常用包</h2></li>
-<li>安装pm2<code>cnpm install -g pm2</code></li>
-<li>安装hexo博客<code>cnpm install -g hexo-cli</code></li>
-<li>安装同步插件rsync<code>cnpm install -g rsync</code></li>
-</ol>
-<h2 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h2><ol>
-<li>apt安装</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install -y docker.io</span><br><span class="line">sudo ln -sf /usr/bin/docker.io /usr/<span class="built_in">local</span>/bin/docker</span><br><span class="line">sudo sed -i <span class="string">'$acomplete -F _docker docker'</span> /etc/bash_completion.d/docker.io</span><br></pre></td></tr></table></figure>
-<ol>
-<li>源码安装最新版本</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install apt-transport-https</span><br><span class="line">sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9</span><br><span class="line">sudo bash -c <span class="string">"echo deb https://get.docker.io/ubuntu docker main &gt; /etc/apt/sources.list.d/docker.list"</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install lxc-docker</span><br></pre></td></tr></table></figure>
-<ol>
-<li>验证安装版本<br><code>docker -v</code></li>
-</ol>
-<h2 id="安装nginx"><a href="#安装nginx" class="headerlink" title="安装nginx"></a>安装nginx</h2><p><code>sudo apt-get install nginx</code><br>启动和配置nginx</p>
-<h2 id="安装redis"><a href="#安装redis" class="headerlink" title="安装redis"></a>安装redis</h2><p><code>sudo apt-get install redis-server</code><br>启动和配置文件:</p>
-<h2 id="安装mongodb"><a href="#安装mongodb" class="headerlink" title="安装mongodb"></a>安装mongodb</h2><ol>
-<li>安装3.0</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"deb http://repo.mongodb.org/apt/debian wheezy/mongodb-org/3.0 main"</span> | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list</span><br><span class="line">apt-get update  </span><br><span class="line">apt-get install mongodb-org</span><br></pre></td></tr></table></figure>
-<ol>
-<li>安装3.2最新版</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv EA312927</span><br><span class="line"><span class="built_in">echo</span> <span class="string">"deb http://repo.mongodb.org/apt/ubuntu "</span>$(lsb_release -sc)<span class="string">"/mongodb-org/3.2 multiverse"</span> | sudo tee /etc/apt/sources.list.d/mongodb.list</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install mongodb-org</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>制定版本<br><code>apt-get install mongodb-org=3.2.0 mongodb-org-server=3.2.0 mongodb-org-shell=3.2.0 mongodb-org-mongos=3.2.0 mongodb-org-tools=3.2.0</code></p>
-</li>
-<li><p>启动服务</p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo service mongod start</span><br><span class="line">sudo service mongod stop</span><br></pre></td></tr></table></figure>
-<ol>
-<li>验证安装<br><code>mongod --version</code></li>
-</ol>
-<p>配置</p>
-<h2 id="安装jdk"><a href="#安装jdk" class="headerlink" title="安装jdk"></a>安装jdk</h2><p>安装jdk1.7<code>sudo apt-get install openjdk-7-jdk</code><br>源码安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir /usr/lib/jvm</span><br><span class="line">sudo tar zxvf jdk-7u21-linux-i586.tar.gz -C /usr/lib/jvm</span><br><span class="line"><span class="built_in">cd</span> /usr/lib/jvm</span><br><span class="line">sudo mv jdk1.7.0_21 java</span><br><span class="line"></span><br><span class="line">sudo vim ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/usr/lib/jvm/java</span><br><span class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre  </span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib  </span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure>
-<h2 id="安装mysql"><a href="#安装mysql" class="headerlink" title="安装mysql"></a>安装mysql</h2><p>实用ubuntu自带的工具下载<br><code>sudo apt-get install mysql-server</code></p>
-<h2 id="环境变量"><a href="#环境变量" class="headerlink" title="环境变量"></a>环境变量</h2><p>常见的方法有两种。</p>
-<ol>
-<li><p>在用户主目录下有一个 .bashrc 文件，可以在此文件中加入 PATH 的设置如下：<br><code>export PATH=”$PATH:/your path1/:/your path2/…..”</code></p>
-</li>
-<li><p>在 /etc/profile中增加</p>
-<pre><code class="bash">PATH=<span class="string">"<span class="variable">$PATH</span>:/home/zhengb66/bin"</span> 
-<span class="built_in">export</span> PATH
-</code></pre>
-</li>
-</ol>
-<h2 id="开机自启动"><a href="#开机自启动" class="headerlink" title="开机自启动"></a>开机自启动</h2><ol>
-<li><p>方法一，编辑rc.loacl脚本<br>Ubuntu开机之后会执行/etc/rc.local文件中的脚本，<br>所以我们可以直接在/etc/rc.local中添加启动脚本。<br>当然要添加到语句：exit 0 前面才行。代码如下:<br><code>sudo vi /etc/rc.local</code><br>然后在 exit 0 前面添加好脚本代码。</p>
-</li>
-<li><p>方法二，添加一个Ubuntu的开机启动服务。<br>如果要添加为开机启动执行的脚本文件，<br>可先将脚本复制或者软连接到/etc/init.d/目录下，<br>然后用：update-rc.d xxx defaults NN命令(NN为启动顺序)，<br>将脚本添加到初始化执行的队列中去。<br>注意如果脚本需要用到网络，则NN需设置一个比较大的数字，如99。<br>1) 将你的启动脚本复制到 /etc/init.d目录下<br>以下假设你的脚本文件名为 test。<br>2) 设置脚本文件的权限</p>
-</li>
-</ol>
-<p>代码如下:<br><code>sudo chmod 755 /etc/init.d/test</code><br>3) 执行如下命令将脚本放到启动脚本中去：<br>代码如下:<br><code>cd /etc/init.d</code>  <code>sudo update-rc.d test defaults 95</code><br> 注：其中数字95是脚本启动的顺序号，按照自己的需要相应修改即可。在你有多个启动脚本，而它们之间又有先后启动的依赖关系时你就知道这个数字的具体作用了。该命令的输出信息参考如下：<br>卸载启动脚本的方法：<br>代码如下:<br><code>cd /etc/init.d</code><br><code>sudo update-rc.d -f test remove</code></p>
-<h2 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h2><p>在Ubuntu下，cron是被默认安装并启动的。通过查看/etc/crontab<br>推荐使用crontab -e命令添加自定义的任务（编辑的是/var/spool/cron下对应用户的cron文件，在/var/spool/cron下的crontab文件 不可以直接创建或者直接修改，crontab文件是通过crontab命令得到的）。<br><code>crontab -e</code></p>
-<ol>
-<li><p>直接执行命令行<br>每2分钟打印一个字符串“Hello World”，保存至文件/home/laigw/cron/HelloWorld.txt中，cron 格式如下：<br><code>*/2 * * * * echo “Hello World.” &gt;&gt; /home/HelloWorld.txt</code></p>
-</li>
-<li><p>shell 文件<br>每3分钟调用一次 /home/laigw/cron/test.sh 文件，cron 格式如下：<br><code>*/3 * * * * /home/laigw/cron/test.sh</code></p>
-<h2 id="ftp和rsync配置"><a href="#ftp和rsync配置" class="headerlink" title="ftp和rsync配置"></a>ftp和rsync配置</h2></li>
-</ol>
-<h2 id="持续集成环境"><a href="#持续集成环境" class="headerlink" title="持续集成环境"></a>持续集成环境</h2><ol>
-<li>jenkens配置</li>
-<li>gitlab配置</li>
-<li>git服务器</li>
-</ol>
-<blockquote>
-<p>如果文章对你有帮助,请去我的博客留个言吧! <a href="http://ka1i.org">我的博客</a></p>
-</blockquote>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://ka1i.org/zfb.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="https://ka1i.org/wx.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">渗透测试</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">emlog</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">漏洞</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 	<div class="article-category tagcloud">
 		<i class="icon-book icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/开发工具//" class="article-tag-list-link color5">开发工具</a>
+        			<a href="/categories/web安全//" class="article-tag-list-link color1">web安全</a>
         		</li>
       		
 		</ul>
 	</div>
 
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://ka1i.org/server-config/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/ajax-jsonp/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ajax和jsonp区别
-        
-      </div>
-    </a>
   
   
-    <a href="/aspcms/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ASPCMS批量测试脚本</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-  <div id="SOHUCS" sid="server-config" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "cytA5lGJ9",
-        conf: "true"
-    });
-</script>
-</script>
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -481,9 +255,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
