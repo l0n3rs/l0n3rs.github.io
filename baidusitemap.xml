@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>https://ka1i.org/azst/</loc>
+    <lastmod>2018-04-25T03:58:48.818Z</lastmod>
+    <data>
+        <display>
+        <title>利用Pentestbox渗透安卓手机</title>
+        <pubTime>2018-04-25T03:42:34.000Z</pubTime>
+        
+        <tag>安卓</tag>
+         
+        <tag>渗透测试</tag>
+         
+        <tag>Pentest</tag>
+         
+         
+           
+             
+              <breadCrumb title="渗透测试" url="https://ka1i.org/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://ka1i.org/dal/</loc>
     <lastmod>2018-04-24T12:54:31.665Z</lastmod>
     <data>
@@ -201,17 +225,17 @@
         <title>Badusb FTP传马脚本</title>
         <pubTime>2018-01-27T11:02:35.000Z</pubTime>
         
+        <tag>极客</tag>
+         
+        <tag>渗透测试</tag>
+         
         <tag>badusb</tag>
          
         <tag>脚本</tag>
          
         <tag>木马</tag>
          
-        <tag>渗透测试</tag>
-         
         <tag>硬件</tag>
-         
-        <tag>极客</tag>
          
          
            
