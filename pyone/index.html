@@ -6,24 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://ka1i.org">
-  <title>emlog信息泄露漏洞 | 孤独常伴</title>
+  <title>Python网络爬虫篇一  requests的简单实用 | 孤独常伴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Emlog 是 “Every Memory Log” 的简称，意即：点滴记忆。它是一款基于PHP语言和MySQL数据库的开源、免费、功能强大的个人或多人联合撰写的博客系统(Blog)。基于PHP和MySQL的功能强大的博客及CMS建站系统。致力于提供快速、稳定，且在使用上又极其简单、舒适的博客服务。安装和使用都非常方便。目前 Emlog 正在受到越来越多的广大用户的青睐。">
-<meta name="keywords" content="渗透测试,emlog,漏洞">
+  <meta name="description" content="今天给大家带来的是Python网络爬虫篇一  requests的简单实用首先：安装requests,在cmd下输入如下命令就OK了    pip install requests如果出现pip用不了,首先查看是否安装完整的Python">
+<meta name="keywords" content="python,爬虫,requests">
 <meta property="og:type" content="article">
-<meta property="og:title" content="emlog信息泄露漏洞">
-<meta property="og:url" content="https://ka1i.org/emlog/index.html">
+<meta property="og:title" content="Python网络爬虫篇一  requests的简单实用">
+<meta property="og:url" content="https://ka1i.org/pyone/index.html">
 <meta property="og:site_name" content="孤独常伴">
-<meta property="og:description" content="Emlog 是 “Every Memory Log” 的简称，意即：点滴记忆。它是一款基于PHP语言和MySQL数据库的开源、免费、功能强大的个人或多人联合撰写的博客系统(Blog)。基于PHP和MySQL的功能强大的博客及CMS建站系统。致力于提供快速、稳定，且在使用上又极其简单、舒适的博客服务。安装和使用都非常方便。目前 Emlog 正在受到越来越多的广大用户的青睐。">
+<meta property="og:description" content="今天给大家带来的是Python网络爬虫篇一  requests的简单实用首先：安装requests,在cmd下输入如下命令就OK了    pip install requests如果出现pip用不了,首先查看是否安装完整的Python">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20180218093418.png">
-<meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20180218093157.png">
-<meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20180218092912.png">
-<meta property="og:updated_time" content="2018-04-25T11:13:37.657Z">
+<meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py11.png">
+<meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py10.png">
+<meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py13.png">
+<meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py12.png">
+<meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py14.png">
+<meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py15.png">
+<meta property="og:updated_time" content="2018-04-26T09:22:08.736Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="emlog信息泄露漏洞">
-<meta name="twitter:description" content="Emlog 是 “Every Memory Log” 的简称，意即：点滴记忆。它是一款基于PHP语言和MySQL数据库的开源、免费、功能强大的个人或多人联合撰写的博客系统(Blog)。基于PHP和MySQL的功能强大的博客及CMS建站系统。致力于提供快速、稳定，且在使用上又极其简单、舒适的博客服务。安装和使用都非常方便。目前 Emlog 正在受到越来越多的广大用户的青睐。">
-<meta name="twitter:image" content="http://oxui4i9z0.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20180218093418.png">
+<meta name="twitter:title" content="Python网络爬虫篇一  requests的简单实用">
+<meta name="twitter:description" content="今天给大家带来的是Python网络爬虫篇一  requests的简单实用首先：安装requests,在cmd下输入如下命令就OK了    pip install requests如果出现pip用不了,首先查看是否安装完整的Python">
+<meta name="twitter:image" content="http://oxui4i9z0.bkt.clouddn.com/py11.png">
   
     <link rel="alternative" href="/atom.xml" title="孤独常伴" type="application/atom+xml">
   
@@ -165,43 +168,40 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-emlog" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-pyone" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      emlog信息泄露漏洞
+      Python网络爬虫篇一  requests的简单实用
     </h1>
   
 
         
-        <a href="/emlog/" class="archive-article-date">
-  	<time datetime="2018-04-25T04:20:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-25</time>
+        <a href="/pyone/" class="archive-article-date">
+  	<time datetime="2018-04-26T08:36:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><excerpt in="" index="" |="" ��ҳժҫ=""><br>Emlog 是 “Every Memory Log” 的简称，意即：点滴记忆。它是一款基于PHP语言和MySQL数据库的开源、免费、功能强大的个人或多人联合撰写的博客系统(Blog)。基于PHP和MySQL的功能强大的博客及CMS建站系统。致力于提供快速、稳定，且在使用上又极其简单、舒适的博客服务。安装和使用都非常方便。目前 Emlog 正在受到越来越多的广大用户的青睐。<br><a id="more"></a><the rest="" of="" contents="" |="" ����ȫ��=""></the></excerpt></p>
-<p>##漏洞地址:  siteurl:admin/index.php<br><img src="http://oxui4i9z0.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20180218093418.png" alt="url"></p>
-<p>##触发条件</p>
-<p>至少需要用户或会员权限</p>
-<p>漏洞复现</p>
-<p>我们只要构造如下的URL:</p>
-<p>siteurl/admin/index.php?action=phpinfo</p>
-<p>直接访问，如下某博客测试图<br><img src="http://oxui4i9z0.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20180218093157.png" alt="test"></p>
-<p>##处理方法</p>
-<pre><code>1.此处获取phpinfo的信息应该是网站后台需要的，我们把这个函数删除即可；
-
-2.限制权限(仅允许管理员)，则修改如下代码:
-
-//phpinfo()  if ($action == &apos;phpinfo&apos;) {      if (ROLE == ROLE_ADMIN){          @phpinfo() OR emMsg(&quot;phpinfo函数被禁用!&quot;);      }      else{          emMsg(&apos;权限不足！&apos;,&apos;./&apos;);      }  }
-</code></pre><p><img src="http://oxui4i9z0.bkt.clouddn.com/QQ%E6%88%AA%E5%9B%BE20180218092912.png" alt="xiufu"></p>
-<p>##复现视频：</p>
-<p><video src="http://oxui4i9z0.bkt.clouddn.com/emlog.mp4" controls="controls" style="max-width: 100%; display: block; margin-left: auto; margin-right: auto;"></video></p>
+        <p><excerpt in="" index="" |="" ��ҳժҫ=""><br>今天给大家带来的是Python网络爬虫篇一  requests的简单实用<br>首先：安装requests,在cmd下输入如下命令就OK了<br>    pip install requests<br>如果出现pip用不了,首先查看是否安装完整的Python<br><a id="more"></a><the rest="" of="" contents="" |="" 余下全文=""><br>如果Python没问题，那就是环境问题<br>在Python根目录下有一个名为Scripts的文件夹,进入文件夹之后可以看到里面就有pip<br><img src="http://oxui4i9z0.bkt.clouddn.com/py11.png" alt="scripts"><br>然后 我的电脑-&gt;右击-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;添加到Path-&gt;保存-&gt;重启cmd即可<br>配置好requests库之后我们就开始正题吧！<br>我们今天需要做的是从这个sitemap中取出这些链接<br><img src="http://oxui4i9z0.bkt.clouddn.com/py10.png" alt="web"><br>既然需要取出里面指定内容,那么就需要正则表达式,那么我们就观察这个页面源码,f分析一下正则表达式该怎么写<br><img src="http://oxui4i9z0.bkt.clouddn.com/py13.png" alt="view"><br>通过观察可以看出<loc>url</loc><br>那么我们的正则表达式就解决了 <loc>(.<em>?)</em></loc><br>首先调用requests这个库<br><img src="http://oxui4i9z0.bkt.clouddn.com/py12.png" alt="use"><br>然后我们还需要正则表达式(re)<br><img src="http://oxui4i9z0.bkt.clouddn.com/py14.png" alt="code"><br>获取源码，通过如下代码可以实现<br>    url（变量名，可任意） = requests.get(‘<a href="https://ka1i.org/sitemap.xml&#39;（这是url）">https://ka1i.org/sitemap.xml&#39;（这是url）</a>)<br>获取到之后，我们就需要提取出我们需要到的东西，通过如下代码即可实现<br>    urls（变量名，可任意） = re.findall(‘<loc>(.?)</loc>‘（正则表达式）,url.text)<br>匹配成功之后我们就可以输出了<br>    for a in urls:<br>         print(a)<br>来看一下效果图吧！<br><img src="http://oxui4i9z0.bkt.clouddn.com/py15.png" alt="result"><br>超过提取出了我们需要的东西<br>完整代码如下，不会的朋友可以Copy学习</the></excerpt></p>
+<pre><code>#!usr/bin/python
+#coding: utf8
+import requests
+import re
+print (&quot;-------------------------------&quot;)
+print(&quot;|       孤独常伴  Ka1i.org     |&quot;)
+print(&quot;-------------------------------&quot;)
+headers={&apos;User-Agent&apos;:&apos;Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko&apos;}
+url = requests.get(&apos;https://ka1i.org/sitemap.xml&apos;,headers=headers)
+title = re.findall(&apos;&lt;loc&gt;(.*?)&lt;/loc&gt;&apos;,url.text)
+for a in title:
+    print(a)
+</code></pre><p>教程到次结束<br>有不懂的朋友可以联系我QQ99746460,希望大家出来本博客.</p>
 <blockquote>
 <ul>
 <li>本便携版以及本文均使用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>协议；</li>
@@ -253,15 +253,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">渗透测试</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">emlog</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">爬虫</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">漏洞</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">requests</a>
         		</li>
       		
 		</ul>
@@ -273,7 +273,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/web安全//" class="article-tag-list-link color1">web安全</a>
+        			<a href="/categories/编程//" class="article-tag-list-link color3">编程</a>
         		</li>
       		
 		</ul>
@@ -328,7 +328,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://ka1i.org/emlog/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://ka1i.org/pyone/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -342,18 +342,9 @@
   
 <nav id="article-nav">
   
-    <a href="/pyone/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          Python网络爬虫篇一  requests的简单实用
-        
-      </div>
-    </a>
   
-  
-    <a href="/azst/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">利用Pentestbox渗透安卓手机</div>
+    <a href="/emlog/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">emlog信息泄露漏洞</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -383,7 +374,7 @@
   
 
   
-  <div id="SOHUCS" sid="emlog" ></div> 
+  <div id="SOHUCS" sid="pyone" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
