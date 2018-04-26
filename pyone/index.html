@@ -22,7 +22,7 @@
 <meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py12.png">
 <meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py14.png">
 <meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py15.png">
-<meta property="og:updated_time" content="2018-04-26T09:30:24.892Z">
+<meta property="og:updated_time" content="2018-04-26T09:32:17.684Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python网络爬虫篇一  requests的简单实用">
 <meta name="twitter:description" content="今天给大家带来的是Python网络爬虫篇一  requests的简单实用   首先：安装requests,在cmd下输入如下命令就OK了   pip install requests 如果出现pip用不了,首先查看是否安装完整的Python">
@@ -198,18 +198,20 @@
 </code></pre><p>如果出现pip用不了,首先查看是否安装完整的Python<br><a id="more"></a><the rest="" of="" contents="" |="" 余下全文=""><br>如果Python没问题，那就是环境问题<br>在Python根目录下有一个名为Scripts的文件夹,进入文件夹之后可以看到里面就有pip<br><img src="http://oxui4i9z0.bkt.clouddn.com/py11.png" alt="scripts"><br>然后 我的电脑-&gt;右击-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;添加到Path-&gt;保存-&gt;重启cmd即可</the></p>
 <blockquote>
 <ul>
-<li>开始正题吧！<br>我们今天需要做的是从这个sitemap中取出这些链接<br><img src="http://oxui4i9z0.bkt.clouddn.com/py10.png" alt="web"><br>既然需要取出里面指定内容,那么就需要正则表达式,那么我们就观察这个页面源码,f分析一下正则表达式该怎么写<br><img src="http://oxui4i9z0.bkt.clouddn.com/py13.png" alt="view"><br>通过观察可以看出<loc>url</loc><br>那么我们的正则表达式就解决了 <loc>(.*?)</loc><br>首先调用requests这个库<br><img src="http://oxui4i9z0.bkt.clouddn.com/py12.png" alt="use"><br>然后我们还需要正则表达式(re)<br><img src="http://oxui4i9z0.bkt.clouddn.com/py14.png" alt="code"><br>获取源码，通过如下代码可以实现</li>
+<li>开始正题吧！</li>
 </ul>
 </blockquote>
+<p>我们今天需要做的是从这个sitemap中取出这些链接<br><img src="http://oxui4i9z0.bkt.clouddn.com/py10.png" alt="web"><br>既然需要取出里面指定内容,那么就需要正则表达式,那么我们就观察这个页面源码,f分析一下正则表达式该怎么写<br><img src="http://oxui4i9z0.bkt.clouddn.com/py13.png" alt="view"><br>通过观察可以看出<loc>url</loc><br>那么我们的正则表达式就解决了 <loc>(.*?)</loc><br>首先调用requests这个库<br><img src="http://oxui4i9z0.bkt.clouddn.com/py12.png" alt="use"><br>然后我们还需要正则表达式(re)<br><img src="http://oxui4i9z0.bkt.clouddn.com/py14.png" alt="code"><br>获取源码，通过如下代码可以实现</p>
 <pre><code>url（变量名，可任意） = requests.get(&apos;https://ka1i.org/sitemap.xml&apos;（这是url）)
 </code></pre><p>获取到之后，我们就需要提取出我们需要到的东西，通过如下代码即可实现<br>    urls（变量名，可任意） = re.findall(‘<loc>(.*?)</loc>‘（正则表达式）,url.text)<br>匹配成功之后我们就可以输出了</p>
 <pre><code>for a in urls:
      print(a)
 </code></pre><blockquote>
 <ul>
-<li>结果<br><img src="http://oxui4i9z0.bkt.clouddn.com/py15.png" alt="result"><br>超过提取出了我们需要的东西<br>完整代码如下，不会的朋友可以Copy学习</li>
+<li>结果</li>
 </ul>
 </blockquote>
+<p><img src="http://oxui4i9z0.bkt.clouddn.com/py15.png" alt="result"><br>超过提取出了我们需要的东西<br>完整代码如下，不会的朋友可以Copy学习</p>
 <pre><code>#!usr/bin/python
 #coding: utf8
 import requests
@@ -622,6 +624,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">思路分享</a>
               </li>
              
@@ -643,10 +649,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">突破</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
               <li class="article-tag-list-item">
