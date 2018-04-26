@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://ka1i.org">
   <title>Python网络爬虫篇一  requests的简单实用 | 孤独常伴</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="今天给大家带来的是Python网络爬虫篇一  requests的简单实用首先：安装requests,在cmd下输入如下命令就OK了    pip install requests如果出现pip用不了,首先查看是否安装完整的Python">
+  <meta name="description" content="今天给大家带来的是Python网络爬虫篇一  requests的简单实用首先：安装requests,在cmd下输入如下命令就OK了 pip install requests 如果出现pip用不了,首先查看是否安装完整的Python">
 <meta name="keywords" content="python,爬虫,requests">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python网络爬虫篇一  requests的简单实用">
 <meta property="og:url" content="https://ka1i.org/pyone/index.html">
 <meta property="og:site_name" content="孤独常伴">
-<meta property="og:description" content="今天给大家带来的是Python网络爬虫篇一  requests的简单实用首先：安装requests,在cmd下输入如下命令就OK了    pip install requests如果出现pip用不了,首先查看是否安装完整的Python">
+<meta property="og:description" content="今天给大家带来的是Python网络爬虫篇一  requests的简单实用首先：安装requests,在cmd下输入如下命令就OK了 pip install requests 如果出现pip用不了,首先查看是否安装完整的Python">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py11.png">
 <meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py10.png">
@@ -22,10 +22,10 @@
 <meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py12.png">
 <meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py14.png">
 <meta property="og:image" content="http://oxui4i9z0.bkt.clouddn.com/py15.png">
-<meta property="og:updated_time" content="2018-04-26T09:22:08.736Z">
+<meta property="og:updated_time" content="2018-04-26T09:25:32.995Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python网络爬虫篇一  requests的简单实用">
-<meta name="twitter:description" content="今天给大家带来的是Python网络爬虫篇一  requests的简单实用首先：安装requests,在cmd下输入如下命令就OK了    pip install requests如果出现pip用不了,首先查看是否安装完整的Python">
+<meta name="twitter:description" content="今天给大家带来的是Python网络爬虫篇一  requests的简单实用首先：安装requests,在cmd下输入如下命令就OK了 pip install requests 如果出现pip用不了,首先查看是否安装完整的Python">
 <meta name="twitter:image" content="http://oxui4i9z0.bkt.clouddn.com/py11.png">
   
     <link rel="alternative" href="/atom.xml" title="孤独常伴" type="application/atom+xml">
@@ -188,7 +188,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><excerpt in="" index="" |="" ��ҳժҫ=""><br>今天给大家带来的是Python网络爬虫篇一  requests的简单实用<br>首先：安装requests,在cmd下输入如下命令就OK了<br>    pip install requests<br>如果出现pip用不了,首先查看是否安装完整的Python<br><a id="more"></a><the rest="" of="" contents="" |="" 余下全文=""><br>如果Python没问题，那就是环境问题<br>在Python根目录下有一个名为Scripts的文件夹,进入文件夹之后可以看到里面就有pip<br><img src="http://oxui4i9z0.bkt.clouddn.com/py11.png" alt="scripts"><br>然后 我的电脑-&gt;右击-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;添加到Path-&gt;保存-&gt;重启cmd即可<br>配置好requests库之后我们就开始正题吧！<br>我们今天需要做的是从这个sitemap中取出这些链接<br><img src="http://oxui4i9z0.bkt.clouddn.com/py10.png" alt="web"><br>既然需要取出里面指定内容,那么就需要正则表达式,那么我们就观察这个页面源码,f分析一下正则表达式该怎么写<br><img src="http://oxui4i9z0.bkt.clouddn.com/py13.png" alt="view"><br>通过观察可以看出<loc>url</loc><br>那么我们的正则表达式就解决了 <loc>(.<em>?)</em></loc><br>首先调用requests这个库<br><img src="http://oxui4i9z0.bkt.clouddn.com/py12.png" alt="use"><br>然后我们还需要正则表达式(re)<br><img src="http://oxui4i9z0.bkt.clouddn.com/py14.png" alt="code"><br>获取源码，通过如下代码可以实现<br>    url（变量名，可任意） = requests.get(‘<a href="https://ka1i.org/sitemap.xml&#39;（这是url）">https://ka1i.org/sitemap.xml&#39;（这是url）</a>)<br>获取到之后，我们就需要提取出我们需要到的东西，通过如下代码即可实现<br>    urls（变量名，可任意） = re.findall(‘<loc>(.?)</loc>‘（正则表达式）,url.text)<br>匹配成功之后我们就可以输出了<br>    for a in urls:<br>         print(a)<br>来看一下效果图吧！<br><img src="http://oxui4i9z0.bkt.clouddn.com/py15.png" alt="result"><br>超过提取出了我们需要的东西<br>完整代码如下，不会的朋友可以Copy学习</the></excerpt></p>
+        <p><excerpt in="" index="" |="" ��ҳժҫ=""><br>今天给大家带来的是Python网络爬虫篇一  requests的简单实用<br>首先：安装requests,在cmd下输入如下命令就OK了</excerpt></p>
+<pre><code>pip install requests
+</code></pre><p>如果出现pip用不了,首先查看是否安装完整的Python<br><a id="more"></a><the rest="" of="" contents="" |="" 余下全文=""><br>如果Python没问题，那就是环境问题<br>在Python根目录下有一个名为Scripts的文件夹,进入文件夹之后可以看到里面就有pip<br><img src="http://oxui4i9z0.bkt.clouddn.com/py11.png" alt="scripts"><br>然后 我的电脑-&gt;右击-&gt;属性-&gt;高级系统设置-&gt;环境变量-&gt;添加到Path-&gt;保存-&gt;重启cmd即可<br>配置好requests库之后我们就开始正题吧！<br>我们今天需要做的是从这个sitemap中取出这些链接<br><img src="http://oxui4i9z0.bkt.clouddn.com/py10.png" alt="web"><br>既然需要取出里面指定内容,那么就需要正则表达式,那么我们就观察这个页面源码,f分析一下正则表达式该怎么写<br><img src="http://oxui4i9z0.bkt.clouddn.com/py13.png" alt="view"><br>通过观察可以看出<loc>url</loc><br>那么我们的正则表达式就解决了 <loc>(.<em>?)</em></loc><br>首先调用requests这个库<br><img src="http://oxui4i9z0.bkt.clouddn.com/py12.png" alt="use"><br>然后我们还需要正则表达式(re)<br><img src="http://oxui4i9z0.bkt.clouddn.com/py14.png" alt="code"><br>获取源码，通过如下代码可以实现<br>    url（变量名，可任意） = requests.get(‘<a href="https://ka1i.org/sitemap.xml&#39;（这是url）">https://ka1i.org/sitemap.xml&#39;（这是url）</a>)<br>获取到之后，我们就需要提取出我们需要到的东西，通过如下代码即可实现<br>    urls（变量名，可任意） = re.findall(‘<loc>(.?)</loc>‘（正则表达式）,url.text)<br>匹配成功之后我们就可以输出了</the></p>
+<pre><code>for a in urls:
+    print(a)
+</code></pre><p>来看一下效果图吧！<br><img src="http://oxui4i9z0.bkt.clouddn.com/py15.png" alt="result"><br>超过提取出了我们需要的东西<br>完整代码如下，不会的朋友可以Copy学习</p>
 <pre><code>#!usr/bin/python
 #coding: utf8
 import requests
@@ -201,7 +206,7 @@ url = requests.get(&apos;https://ka1i.org/sitemap.xml&apos;,headers=headers)
 title = re.findall(&apos;&lt;loc&gt;(.*?)&lt;/loc&gt;&apos;,url.text)
 for a in title:
     print(a)
-</code></pre><p>教程到次结束<br>有不懂的朋友可以联系我QQ99746460,希望大家出来本博客.</p>
+</code></pre><p>有不懂的朋友可以联系我QQ99746460,希望大家出来本博客.</p>
 <blockquote>
 <ul>
 <li>本便携版以及本文均使用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a>协议；</li>
@@ -493,7 +498,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">极客</a>
+                <a href="javascript:void(0)" class="js-tag color5">http</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">ASPCMS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">批量</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">getshell</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -506,46 +523,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Pentest</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">http</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">ewebeditor</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">渗透</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">思路</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">注入</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">emlog</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">漏洞</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -565,6 +542,54 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">极客</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">cookie</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">注入</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">ewebeditor</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">渗透</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">思路</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">emlog</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">漏洞</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Linux命令</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
              
@@ -577,23 +602,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color1">linux</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Linux命令</a>
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">ASPCMS</a>
+                <a href="javascript:void(0)" class="js-tag color5">思路分享</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">批量</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">getshell</a>
+                <a href="javascript:void(0)" class="js-tag color2">WiFi攻击</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -602,22 +623,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">无人机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">思路分享</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">WiFi攻击</a>
               </li>
              
               <li class="article-tag-list-item">
